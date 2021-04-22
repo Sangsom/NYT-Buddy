@@ -52,8 +52,8 @@
 		1B85227F2631AD3E0082E7C1 /* NYT Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				1B8522902631B1EE0082E7C1 /* Most Popular */,
 				1B8522802631AD3E0082E7C1 /* NYT_BuddyApp.swift */,
-				1B8522822631AD3E0082E7C1 /* ContentView.swift */,
 				1B8522842631AD3F0082E7C1 /* Assets.xcassets */,
 				1B8522892631AD3F0082E7C1 /* Info.plist */,
 				1B8522862631AD3F0082E7C1 /* Preview Content */,
@@ -67,6 +67,14 @@
 				1B8522872631AD3F0082E7C1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1B8522902631B1EE0082E7C1 /* Most Popular */ = {
+			isa = PBXGroup;
+			children = (
+				1B8522822631AD3E0082E7C1 /* ContentView.swift */,
+			);
+			path = "Most Popular";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
