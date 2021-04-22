@@ -72,9 +72,41 @@
 		1B8522902631B1EE0082E7C1 /* Most Popular */ = {
 			isa = PBXGroup;
 			children = (
-				1B8522822631AD3E0082E7C1 /* ContentView.swift */,
+				1B8522962631B5D90082E7C1 /* Models */,
+				1B8522952631B5D20082E7C1 /* Services */,
+				1B8522972631B5E00082E7C1 /* View Models */,
+				1B8522922631B5C10082E7C1 /* Views */,
 			);
 			path = "Most Popular";
+			sourceTree = "<group>";
+		};
+		1B8522922631B5C10082E7C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B8522822631AD3E0082E7C1 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1B8522952631B5D20082E7C1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1B8522962631B5D90082E7C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1B8522972631B5E00082E7C1 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
