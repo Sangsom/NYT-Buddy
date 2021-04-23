@@ -12,6 +12,7 @@
 		1B8522852631AD3F0082E7C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B8522842631AD3F0082E7C1 /* Assets.xcassets */; };
 		1B8522882631AD3F0082E7C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B8522872631AD3F0082E7C1 /* Preview Assets.xcassets */; };
 		1B8522992632A90F0082E7C1 /* MostPopularDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522982632A90F0082E7C1 /* MostPopularDataService.swift */; };
+		1B85229C2632A9EF0082E7C1 /* MostPopularData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85229B2632A9EF0082E7C1 /* MostPopularData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1B8522872631AD3F0082E7C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1B8522892631AD3F0082E7C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B8522982632A90F0082E7C1 /* MostPopularDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularDataService.swift; sourceTree = "<group>"; };
+		1B85229B2632A9EF0082E7C1 /* MostPopularData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		1B8522962631B5D90082E7C1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1B85229B2632A9EF0082E7C1 /* MostPopularData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B85229C2632A9EF0082E7C1 /* MostPopularData.swift in Sources */,
 				1B8522992632A90F0082E7C1 /* MostPopularDataService.swift in Sources */,
 				1B8522832631AD3E0082E7C1 /* ContentView.swift in Sources */,
 				1B8522812631AD3E0082E7C1 /* NYT_BuddyApp.swift in Sources */,
