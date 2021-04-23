@@ -8,10 +8,16 @@
 import Foundation
 
 class MostPopularViewModel: ObservableObject {
+    var mostPopularDataService: MostPopularDataService?
+
     @Published var articles = [MostPopularArticle]()
 
-    func fetchMostPopularArticles() {
-        MostPopularDataService.shared.fetchMostViewedArticles { result in
+    init() {
+        mostPopularDataService = MostPopularDataService()
+    }
+
+    func fetchMostPopularArticles(for period: Period) {
+        mostPopularDataService?.fetchMostViewedArticles { result in
             switch result {
             case .success(let articles):
                 DispatchQueue.main.async {

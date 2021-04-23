@@ -18,9 +18,6 @@ protocol DataService {
 }
 
 class MostPopularDataService: DataService {
-    static let shared = MostPopularDataService()
-
-    private init() { }
 
     func fetchMostViewedArticles(completion: @escaping (Result<[MostPopularArticle], NetworkError>) -> Void) {
         guard let url = createURL() else {
