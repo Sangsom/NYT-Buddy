@@ -7,18 +7,6 @@
 
 import SwiftUI
 
-enum Period: Int, CaseIterable, Identifiable {
-    case daily = 1
-    case weekly = 7
-    case monthly = 30
-
-    var id: Int { self.rawValue }
-    var stringValue: String {
-        let dayString = self.rawValue == 1 ? "day" : "days"
-        return "\(self.rawValue) \(dayString)"
-    }
-}
-
 struct MostPopularView: View {
     @EnvironmentObject var mostPopularViewModel: MostPopularViewModel
     @State private var selectedPeriod = Period.daily.rawValue

@@ -15,6 +15,7 @@
 		1B85229C2632A9EF0082E7C1 /* MostPopularData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85229B2632A9EF0082E7C1 /* MostPopularData.swift */; };
 		1B85229F2632C19D0082E7C1 /* MostPopularViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85229E2632C19D0082E7C1 /* MostPopularViewModel.swift */; };
 		1B8522A62632D4150082E7C1 /* ArticleListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522A52632D4150082E7C1 /* ArticleListItem.swift */; };
+		1B8522AB2632F4CA0082E7C1 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522AA2632F4CA0082E7C1 /* Period.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1B85229B2632A9EF0082E7C1 /* MostPopularData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularData.swift; sourceTree = "<group>"; };
 		1B85229E2632C19D0082E7C1 /* MostPopularViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularViewModel.swift; sourceTree = "<group>"; };
 		1B8522A52632D4150082E7C1 /* ArticleListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListItem.swift; sourceTree = "<group>"; };
+		1B8522AA2632F4CA0082E7C1 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		1B8522902631B1EE0082E7C1 /* Most Popular */ = {
 			isa = PBXGroup;
 			children = (
+				1B8522A82632F4AE0082E7C1 /* Common */,
 				1B8522962631B5D90082E7C1 /* Models */,
 				1B8522952631B5D20082E7C1 /* Services */,
 				1B8522972631B5E00082E7C1 /* View Models */,
@@ -127,6 +130,22 @@
 				1B8522A52632D4150082E7C1 /* ArticleListItem.swift */,
 			);
 			path = "Most Popular";
+			sourceTree = "<group>";
+		};
+		1B8522A82632F4AE0082E7C1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1B8522A92632F4B50082E7C1 /* Enums */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1B8522A92632F4B50082E7C1 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				1B8522AA2632F4CA0082E7C1 /* Period.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +223,7 @@
 				1B8522A62632D4150082E7C1 /* ArticleListItem.swift in Sources */,
 				1B85229F2632C19D0082E7C1 /* MostPopularViewModel.swift in Sources */,
 				1B8522812631AD3E0082E7C1 /* NYT_BuddyApp.swift in Sources */,
+				1B8522AB2632F4CA0082E7C1 /* Period.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
