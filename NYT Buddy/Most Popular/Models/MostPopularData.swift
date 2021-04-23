@@ -15,4 +15,5 @@ struct MostPopularData: Codable {
 struct MostPopularArticle: Codable, Identifiable {
     var id: Int
     var title: String
+    var abstract: String
 }
