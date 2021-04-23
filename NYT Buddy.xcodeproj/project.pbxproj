@@ -13,6 +13,7 @@
 		1B8522882631AD3F0082E7C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B8522872631AD3F0082E7C1 /* Preview Assets.xcassets */; };
 		1B8522992632A90F0082E7C1 /* MostPopularDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522982632A90F0082E7C1 /* MostPopularDataService.swift */; };
 		1B85229C2632A9EF0082E7C1 /* MostPopularData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85229B2632A9EF0082E7C1 /* MostPopularData.swift */; };
+		1B85229F2632C19D0082E7C1 /* MostPopularViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85229E2632C19D0082E7C1 /* MostPopularViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1B8522892631AD3F0082E7C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B8522982632A90F0082E7C1 /* MostPopularDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularDataService.swift; sourceTree = "<group>"; };
 		1B85229B2632A9EF0082E7C1 /* MostPopularData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularData.swift; sourceTree = "<group>"; };
+		1B85229E2632C19D0082E7C1 /* MostPopularViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		1B8522972631B5E00082E7C1 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				1B85229E2632C19D0082E7C1 /* MostPopularViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				1B85229C2632A9EF0082E7C1 /* MostPopularData.swift in Sources */,
 				1B8522992632A90F0082E7C1 /* MostPopularDataService.swift in Sources */,
 				1B8522832631AD3E0082E7C1 /* ContentView.swift in Sources */,
+				1B85229F2632C19D0082E7C1 /* MostPopularViewModel.swift in Sources */,
 				1B8522812631AD3E0082E7C1 /* NYT_BuddyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
