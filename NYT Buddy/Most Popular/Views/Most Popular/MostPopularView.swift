@@ -9,11 +9,10 @@ import SwiftUI
 
 struct MostPopularView: View {
     @EnvironmentObject var mostPopularViewModel: MostPopularViewModel
-    @State private var selectedPeriod = Period.daily.rawValue
 
     var body: some View {
         VStack {
-            Picker("Period", selection: $selectedPeriod) {
+            Picker("Period", selection: $mostPopularViewModel.selectedPeriod) {
                 ForEach(Period.allCases) { period in
                     Text(period.stringValue)
                 }
@@ -21,6 +20,9 @@ struct MostPopularView: View {
             .padding(.horizontal)
             .padding(.bottom)
             .pickerStyle(SegmentedPickerStyle())
+            .onChange(of: mostPopularViewModel.selectedPeriod, perform: { _ in
+                self.loadData()
+            })
 
             ScrollView(.vertical, showsIndicators: true) {
                 VStack(alignment: .leading, spacing: 20.0) {

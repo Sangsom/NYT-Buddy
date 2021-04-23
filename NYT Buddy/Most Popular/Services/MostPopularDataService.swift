@@ -18,6 +18,11 @@ protocol DataService {
 }
 
 class MostPopularDataService: DataService {
+    private(set) var period: Period.RawValue
+
+    init(period: Period.RawValue) {
+        self.period = period
+    }
 
     func fetchMostViewedArticles(completion: @escaping (Result<[MostPopularArticle], NetworkError>) -> Void) {
         guard let url = createURL() else {
@@ -46,11 +51,15 @@ class MostPopularDataService: DataService {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "api.nytimes.com"
-        urlComponents.path = "/svc/mostpopular/v2/viewed/1.json"
+        urlComponents.path = "/svc/mostpopular/v2/viewed/\(period).json"
 
         let apiQueryItem = URLQueryItem(name: "api-key", value: "10se5TvsUG7aG7rr31AxOcme0SEZOQ9q")
         urlComponents.queryItems = [apiQueryItem]
 
         return urlComponents.url
+    }
+
+    func updatePeriod(_ period: Period.RawValue) {
+        self.period = period
     }
 }

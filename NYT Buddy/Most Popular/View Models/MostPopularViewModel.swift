@@ -11,12 +11,17 @@ class MostPopularViewModel: ObservableObject {
     var mostPopularDataService: MostPopularDataService?
 
     @Published var articles = [MostPopularArticle]()
-
-    init() {
-        mostPopularDataService = MostPopularDataService()
+    @Published var selectedPeriod = Period.daily.rawValue {
+        didSet {
+            mostPopularDataService?.updatePeriod(selectedPeriod)
+        }
     }
 
-    func fetchMostPopularArticles(for period: Period) {
+    init() {
+        mostPopularDataService = MostPopularDataService(period: selectedPeriod)
+    }
+
+    func fetchMostPopularArticles() {
         mostPopularDataService?.fetchMostViewedArticles { result in
             switch result {
             case .success(let articles):
