@@ -8,24 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		1B8522812631AD3E0082E7C1 /* NYT_BuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522802631AD3E0082E7C1 /* NYT_BuddyApp.swift */; };
-		1B8522832631AD3E0082E7C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522822631AD3E0082E7C1 /* ContentView.swift */; };
+		1B8522832631AD3E0082E7C1 /* MostPopularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522822631AD3E0082E7C1 /* MostPopularView.swift */; };
 		1B8522852631AD3F0082E7C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B8522842631AD3F0082E7C1 /* Assets.xcassets */; };
 		1B8522882631AD3F0082E7C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B8522872631AD3F0082E7C1 /* Preview Assets.xcassets */; };
 		1B8522992632A90F0082E7C1 /* MostPopularDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522982632A90F0082E7C1 /* MostPopularDataService.swift */; };
 		1B85229C2632A9EF0082E7C1 /* MostPopularData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85229B2632A9EF0082E7C1 /* MostPopularData.swift */; };
 		1B85229F2632C19D0082E7C1 /* MostPopularViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85229E2632C19D0082E7C1 /* MostPopularViewModel.swift */; };
+		1B8522A62632D4150082E7C1 /* ArticleListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522A52632D4150082E7C1 /* ArticleListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B85227D2631AD3E0082E7C1 /* NYT Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYT Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8522802631AD3E0082E7C1 /* NYT_BuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYT_BuddyApp.swift; sourceTree = "<group>"; };
-		1B8522822631AD3E0082E7C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1B8522822631AD3E0082E7C1 /* MostPopularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularView.swift; sourceTree = "<group>"; };
 		1B8522842631AD3F0082E7C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B8522872631AD3F0082E7C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1B8522892631AD3F0082E7C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B8522982632A90F0082E7C1 /* MostPopularDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularDataService.swift; sourceTree = "<group>"; };
 		1B85229B2632A9EF0082E7C1 /* MostPopularData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularData.swift; sourceTree = "<group>"; };
 		1B85229E2632C19D0082E7C1 /* MostPopularViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularViewModel.swift; sourceTree = "<group>"; };
+		1B8522A52632D4150082E7C1 /* ArticleListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +91,7 @@
 		1B8522922631B5C10082E7C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1B8522822631AD3E0082E7C1 /* ContentView.swift */,
+				1B8522A22632C3040082E7C1 /* Most Popular */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -116,6 +118,15 @@
 				1B85229E2632C19D0082E7C1 /* MostPopularViewModel.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		1B8522A22632C3040082E7C1 /* Most Popular */ = {
+			isa = PBXGroup;
+			children = (
+				1B8522822631AD3E0082E7C1 /* MostPopularView.swift */,
+				1B8522A52632D4150082E7C1 /* ArticleListItem.swift */,
+			);
+			path = "Most Popular";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,7 +200,8 @@
 			files = (
 				1B85229C2632A9EF0082E7C1 /* MostPopularData.swift in Sources */,
 				1B8522992632A90F0082E7C1 /* MostPopularDataService.swift in Sources */,
-				1B8522832631AD3E0082E7C1 /* ContentView.swift in Sources */,
+				1B8522832631AD3E0082E7C1 /* MostPopularView.swift in Sources */,
+				1B8522A62632D4150082E7C1 /* ArticleListItem.swift in Sources */,
 				1B85229F2632C19D0082E7C1 /* MostPopularViewModel.swift in Sources */,
 				1B8522812631AD3E0082E7C1 /* NYT_BuddyApp.swift in Sources */,
 			);

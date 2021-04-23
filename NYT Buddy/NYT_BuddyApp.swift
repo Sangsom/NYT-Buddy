@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct NYT_BuddyApp: App {
+    @StateObject var mostPopularViewModel = MostPopularViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                MostPopularView()
+                    .environmentObject(mostPopularViewModel)
+            }
         }
     }
 }
