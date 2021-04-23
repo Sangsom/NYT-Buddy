@@ -7,18 +7,39 @@
 
 import SwiftUI
 
+enum Period: Int, CaseIterable, Identifiable {
+    case daily = 1
+    case weekly = 7
+    case monthly = 30
+
+    var id: Int { self.rawValue }
+    var stringValue: String { "\(self.rawValue)" }
+}
+
 struct MostPopularView: View {
     @EnvironmentObject var mostPopularViewModel: MostPopularViewModel
+    @State private var selectedPeriod = Period.daily.rawValue
 
     var body: some View {
-        ScrollView(.vertical, showsIndicators: true) {
-            VStack(alignment: .leading, spacing: 20.0) {
-                ForEach(mostPopularViewModel.articles) { article in
-                    ArticleListItem(article: article)
+        VStack {
+            Picker("Period", selection: $selectedPeriod) {
+                ForEach(Period.allCases) { period in
+                    Text(period.stringValue)
                 }
             }
             .padding(.horizontal)
-            .onAppear(perform: loadData)
+            .padding(.bottom)
+            .pickerStyle(SegmentedPickerStyle())
+
+            ScrollView(.vertical, showsIndicators: true) {
+                VStack(alignment: .leading, spacing: 20.0) {
+                    ForEach(mostPopularViewModel.articles) { article in
+                        ArticleListItem(article: article)
+                    }
+                }
+                .padding(.horizontal)
+                .onAppear(perform: loadData)
+            }
         }
     }
 

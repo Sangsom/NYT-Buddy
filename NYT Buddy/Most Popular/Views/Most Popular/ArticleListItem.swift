@@ -12,10 +12,12 @@ struct ArticleListItem: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8.0) {
-            Text(article.title)
-                .font(.title2)
-                .fontWeight(.medium)
-                .multilineTextAlignment(.leading)
+            HStack {
+                Text(article.title)
+                    .font(.title2)
+                    .fontWeight(.medium)
+                    .multilineTextAlignment(.leading)
+            }
 
             Text(article.abstract)
                 .font(.body)
