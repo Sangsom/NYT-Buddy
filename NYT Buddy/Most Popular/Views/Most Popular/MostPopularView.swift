@@ -12,18 +12,11 @@ struct MostPopularView: View {
 
     var body: some View {
         ZStack {
-            VStack {
-                Picker("Period", selection: $mostPopularViewModel.selectedPeriod) {
-                    ForEach(Period.allCases) { period in
-                        Text(period.stringValue)
-                    }
-                }
-                .padding(.horizontal)
-                .padding(.bottom)
-                .pickerStyle(SegmentedPickerStyle())
-                .onChange(of: mostPopularViewModel.selectedPeriod, perform: { _ in
-                    self.loadData()
-                })
+            VStack(spacing: 20) {
+                SelectPeriodView()
+                    .onChange(of: mostPopularViewModel.selectedPeriod, perform: { _ in
+                        self.loadData()
+                    })
 
                 ScrollView(.vertical, showsIndicators: true) {
                     VStack(alignment: .leading, spacing: 20.0) {
@@ -31,10 +24,10 @@ struct MostPopularView: View {
                             ArticleListItem(article: article)
                         }
                     }
-                    .padding(.horizontal)
                     .onAppear(perform: loadData)
                 }
             }
+            .padding(.horizontal)
             .blur(radius: mostPopularViewModel.state == .loading ? 4 : 0)
             .disabled(mostPopularViewModel.state == .loading)
 
