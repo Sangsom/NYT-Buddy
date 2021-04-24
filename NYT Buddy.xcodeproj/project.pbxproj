@@ -16,6 +16,7 @@
 		1B85229F2632C19D0082E7C1 /* MostPopularViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85229E2632C19D0082E7C1 /* MostPopularViewModel.swift */; };
 		1B8522A62632D4150082E7C1 /* ArticleListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522A52632D4150082E7C1 /* ArticleListItem.swift */; };
 		1B8522AB2632F4CA0082E7C1 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522AA2632F4CA0082E7C1 /* Period.swift */; };
+		1B8522AF2633BD6F0082E7C1 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522AE2633BD6F0082E7C1 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		1B85229E2632C19D0082E7C1 /* MostPopularViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularViewModel.swift; sourceTree = "<group>"; };
 		1B8522A52632D4150082E7C1 /* ArticleListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListItem.swift; sourceTree = "<group>"; };
 		1B8522AA2632F4CA0082E7C1 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
+		1B8522AE2633BD6F0082E7C1 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		1B8522A82632F4AE0082E7C1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1B8522AD2633BD0B0082E7C1 /* Constants */,
 				1B8522A92632F4B50082E7C1 /* Enums */,
 			);
 			path = Common;
@@ -146,6 +149,14 @@
 				1B8522AA2632F4CA0082E7C1 /* Period.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		1B8522AD2633BD0B0082E7C1 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1B8522AE2633BD6F0082E7C1 /* AppConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +231,7 @@
 				1B85229C2632A9EF0082E7C1 /* MostPopularData.swift in Sources */,
 				1B8522992632A90F0082E7C1 /* MostPopularDataService.swift in Sources */,
 				1B8522832631AD3E0082E7C1 /* MostPopularView.swift in Sources */,
+				1B8522AF2633BD6F0082E7C1 /* AppConstants.swift in Sources */,
 				1B8522A62632D4150082E7C1 /* ArticleListItem.swift in Sources */,
 				1B85229F2632C19D0082E7C1 /* MostPopularViewModel.swift in Sources */,
 				1B8522812631AD3E0082E7C1 /* NYT_BuddyApp.swift in Sources */,
