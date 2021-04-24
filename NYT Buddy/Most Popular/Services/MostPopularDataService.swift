@@ -12,12 +12,14 @@ protocol DataService {
 }
 
 class MostPopularDataService: DataService {
+    // MARK: - Properties
     private(set) var period: Period.RawValue
 
     init(period: Period.RawValue) {
         self.period = period
     }
 
+    // MARK: - Custom methods
     func fetchMostViewedArticles(completion: @escaping (Result<[MostPopularArticle], NetworkError>) -> Void) {
         guard let url = createURL() else {
             return completion(.failure(.badURL))
