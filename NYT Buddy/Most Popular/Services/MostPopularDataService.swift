@@ -53,7 +53,7 @@ class MostPopularDataService: DataService {
         urlComponents.host = "api.nytimes.com"
         urlComponents.path = "/svc/mostpopular/v2/viewed/\(period).json"
 
-        let apiQueryItem = URLQueryItem(name: "api-key", value: "10se5TvsUG7aG7rr31AxOcme0SEZOQ9q")
+        let apiQueryItem = URLQueryItem(name: "api-key", value: Constants.API.NYT_API_KEY)
         urlComponents.queryItems = [apiQueryItem]
 
         return urlComponents.url
