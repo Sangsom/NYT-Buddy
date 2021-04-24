@@ -7,12 +7,6 @@
 
 import Foundation
 
-enum NetworkError: Error {
-    case badURL
-    case noData
-    case decodingError
-}
-
 protocol DataService {
     func fetchMostViewedArticles(completion: @escaping (Result<[MostPopularArticle], NetworkError>) -> Void)
 }
