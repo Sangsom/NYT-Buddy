@@ -20,6 +20,7 @@
 		1B8522B52633C1DB0082E7C1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522B42633C1DB0082E7C1 /* LoadingView.swift */; };
 		1B8522B82633C64B0082E7C1 /* SelectPeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522B72633C64B0082E7C1 /* SelectPeriodView.swift */; };
 		1B8522BB2633C7510082E7C1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522BA2633C7510082E7C1 /* NetworkError.swift */; };
+		1B8522BE2633C77B0082E7C1 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522BD2633C77B0082E7C1 /* LoadingState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		1B8522B42633C1DB0082E7C1 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		1B8522B72633C64B0082E7C1 /* SelectPeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPeriodView.swift; sourceTree = "<group>"; };
 		1B8522BA2633C7510082E7C1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		1B8522BD2633C77B0082E7C1 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			children = (
 				1B8522AA2632F4CA0082E7C1 /* Period.swift */,
 				1B8522BA2633C7510082E7C1 /* NetworkError.swift */,
+				1B8522BD2633C77B0082E7C1 /* LoadingState.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B8522BE2633C77B0082E7C1 /* LoadingState.swift in Sources */,
 				1B85229C2632A9EF0082E7C1 /* MostPopularData.swift in Sources */,
 				1B8522992632A90F0082E7C1 /* MostPopularDataService.swift in Sources */,
 				1B8522832631AD3E0082E7C1 /* MostPopularView.swift in Sources */,

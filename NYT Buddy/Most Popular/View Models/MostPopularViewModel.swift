@@ -7,13 +7,6 @@
 
 import Foundation
 
-enum LoadingState: Equatable {
-    case idle
-    case loading
-    case failed(NetworkError)
-    case success
-}
-
 class MostPopularViewModel: ObservableObject {
     // MARK: - Properties
     var mostPopularDataService: MostPopularDataService?
