@@ -23,6 +23,13 @@
 		1B8522BE2633C77B0082E7C1 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522BD2633C77B0082E7C1 /* LoadingState.swift */; };
 		1B8522D326352A490082E7C1 /* PeriodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522D226352A490082E7C1 /* PeriodTests.swift */; };
 		1B8522D626352A630082E7C1 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522AA2632F4CA0082E7C1 /* Period.swift */; };
+		1B8522E126352EE50082E7C1 /* MostPopularViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522E026352EE50082E7C1 /* MostPopularViewModelTests.swift */; };
+		1B8522E426352EEB0082E7C1 /* MostPopularViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85229E2632C19D0082E7C1 /* MostPopularViewModel.swift */; };
+		1B8522E726352F6D0082E7C1 /* MostPopularDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522982632A90F0082E7C1 /* MostPopularDataService.swift */; };
+		1B8522EA26352F820082E7C1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522BA2633C7510082E7C1 /* NetworkError.swift */; };
+		1B8522ED26352F850082E7C1 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522BD2633C77B0082E7C1 /* LoadingState.swift */; };
+		1B8522F026352F940082E7C1 /* MostPopularData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85229B2632A9EF0082E7C1 /* MostPopularData.swift */; };
+		1B8522F326352FAA0082E7C1 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522AE2633BD6F0082E7C1 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +62,7 @@
 		1B8522C62635291B0082E7C1 /* NYT BuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NYT BuddyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8522CA2635291B0082E7C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B8522D226352A490082E7C1 /* PeriodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodTests.swift; sourceTree = "<group>"; };
+		1B8522E026352EE50082E7C1 /* MostPopularViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +208,7 @@
 			children = (
 				1B8522DB26352D2E0082E7C1 /* Enums */,
 				1B8522CA2635291B0082E7C1 /* Info.plist */,
+				1B8522E026352EE50082E7C1 /* MostPopularViewModelTests.swift */,
 			);
 			path = "NYT BuddyTests";
 			sourceTree = "<group>";
@@ -330,8 +339,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B8522F026352F940082E7C1 /* MostPopularData.swift in Sources */,
+				1B8522F326352FAA0082E7C1 /* AppConstants.swift in Sources */,
 				1B8522D326352A490082E7C1 /* PeriodTests.swift in Sources */,
+				1B8522ED26352F850082E7C1 /* LoadingState.swift in Sources */,
+				1B8522E126352EE50082E7C1 /* MostPopularViewModelTests.swift in Sources */,
+				1B8522E726352F6D0082E7C1 /* MostPopularDataService.swift in Sources */,
+				1B8522EA26352F820082E7C1 /* NetworkError.swift in Sources */,
 				1B8522D626352A630082E7C1 /* Period.swift in Sources */,
+				1B8522E426352EEB0082E7C1 /* MostPopularViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
