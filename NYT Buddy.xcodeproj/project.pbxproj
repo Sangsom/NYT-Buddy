@@ -21,7 +21,8 @@
 		1B8522B82633C64B0082E7C1 /* SelectPeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522B72633C64B0082E7C1 /* SelectPeriodView.swift */; };
 		1B8522BB2633C7510082E7C1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522BA2633C7510082E7C1 /* NetworkError.swift */; };
 		1B8522BE2633C77B0082E7C1 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522BD2633C77B0082E7C1 /* LoadingState.swift */; };
-		1B8522C92635291B0082E7C1 /* NYT_BuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522C82635291B0082E7C1 /* NYT_BuddyTests.swift */; };
+		1B8522D326352A490082E7C1 /* PeriodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522D226352A490082E7C1 /* PeriodTests.swift */; };
+		1B8522D626352A630082E7C1 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522AA2632F4CA0082E7C1 /* Period.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +53,8 @@
 		1B8522BA2633C7510082E7C1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		1B8522BD2633C77B0082E7C1 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 		1B8522C62635291B0082E7C1 /* NYT BuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NYT BuddyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B8522C82635291B0082E7C1 /* NYT_BuddyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYT_BuddyTests.swift; sourceTree = "<group>"; };
 		1B8522CA2635291B0082E7C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B8522D226352A490082E7C1 /* PeriodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,10 +198,18 @@
 		1B8522C72635291B0082E7C1 /* NYT BuddyTests */ = {
 			isa = PBXGroup;
 			children = (
-				1B8522C82635291B0082E7C1 /* NYT_BuddyTests.swift */,
+				1B8522DB26352D2E0082E7C1 /* Enums */,
 				1B8522CA2635291B0082E7C1 /* Info.plist */,
 			);
 			path = "NYT BuddyTests";
+			sourceTree = "<group>";
+		};
+		1B8522DB26352D2E0082E7C1 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				1B8522D226352A490082E7C1 /* PeriodTests.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,7 +330,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B8522C92635291B0082E7C1 /* NYT_BuddyTests.swift in Sources */,
+				1B8522D326352A490082E7C1 /* PeriodTests.swift in Sources */,
+				1B8522D626352A630082E7C1 /* Period.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
