@@ -36,26 +36,6 @@ struct MostPopularArticle: Codable, Identifiable {
     }
 }
 
-struct Media: Codable {
-    var type: String
-    var subtype: String
-    var caption: String
-    var copyright: String
-
-    var mediaMetadata: [MediaMetadata]
-
-    enum CodingKeys: String, CodingKey {
-        case type
-        case subtype
-        case caption
-        case copyright
-
-        case mediaMetadata = "media-metadata"
-    }
-
-    static let exampleData = Media(type: "image", subtype: "photo", caption: "Syringes with the Pfizer vaccine are ready to be distributed in Dearborn, Mich.", copyright: "Emily Rose Bennett for The New York Times", mediaMetadata: MediaMetadata.exampleData)
-}
-
 struct MediaMetadata: Codable {
     var url: URL
     var format: String
