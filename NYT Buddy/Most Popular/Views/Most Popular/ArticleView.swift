@@ -13,8 +13,13 @@ struct ArticleView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10.0) {
             HStack {
+                Text(article.section)
+                    .foregroundColor(.secondary)
+                    .bold()
+
                 Spacer()
                 Text(article.published)
+                    .foregroundColor(.secondary)
             }
             Text(article.title)
                 .font(.title)
