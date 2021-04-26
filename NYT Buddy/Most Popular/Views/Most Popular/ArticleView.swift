@@ -11,7 +11,20 @@ struct ArticleView: View {
     var article: MostPopularArticle
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading, spacing: 10.0) {
+            Text(article.title)
+                .font(.title)
+                .fontWeight(.medium)
+                .multilineTextAlignment(.leading)
+
+            Text(article.abstract)
+                .font(.body)
+                .multilineTextAlignment(.leading)
+
+            Spacer()
+        }
+        .navigationTitle("")
+        .padding(.horizontal)
     }
 }
 
