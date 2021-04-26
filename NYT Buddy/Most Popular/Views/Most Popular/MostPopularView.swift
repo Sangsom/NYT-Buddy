@@ -11,30 +11,31 @@ struct MostPopularView: View {
     @EnvironmentObject var mostPopularViewModel: MostPopularViewModel
 
     var body: some View {
-        ZStack {
-            VStack(spacing: 20) {
-                SelectPeriodView()
-                    .onChange(of: mostPopularViewModel.selectedPeriod, perform: { _ in
-                        self.loadData()
-                    })
+            ZStack {
+                VStack(spacing: 20) {
+                    SelectPeriodView()
+                        .padding(.horizontal)
+                        .onChange(of: mostPopularViewModel.selectedPeriod, perform: { _ in
+                            self.loadData()
+                        })
 
-                ScrollView(.vertical, showsIndicators: true) {
-                    VStack(alignment: .leading, spacing: 20.0) {
-                        ForEach(mostPopularViewModel.articles) { article in
-                            ArticleListItem(article: article)
-                        }
-                    }
-                    .onAppear(perform: loadData)
+                    List(mostPopularViewModel.articles) { article in
+                        NavigationLink(
+                            destination: Text("Destination"),
+                            label: {
+                                ArticleListItem(article: article)
+                            })
+
+                    }.onAppear(perform: loadData)
+                }
+                .blur(radius: mostPopularViewModel.state == .loading ? 4 : 0)
+                .disabled(mostPopularViewModel.state == .loading)
+
+                if mostPopularViewModel.state == .loading {
+                    LoadingView()
                 }
             }
-            .padding(.horizontal)
-            .blur(radius: mostPopularViewModel.state == .loading ? 4 : 0)
-            .disabled(mostPopularViewModel.state == .loading)
-
-            if mostPopularViewModel.state == .loading {
-                LoadingView()
-            }
-        }
+            .navigationTitle("Most Popular")
     }
 
     private func loadData() {
