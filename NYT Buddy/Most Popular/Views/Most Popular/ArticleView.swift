@@ -24,6 +24,9 @@ struct ArticleView: View {
                 Text(article.published)
                     .foregroundColor(.secondary)
             }
+
+            KeywordsListView(keywords: article.keywordsList)
+
             Text(article.title)
                 .font(.title)
                 .fontWeight(.medium)
