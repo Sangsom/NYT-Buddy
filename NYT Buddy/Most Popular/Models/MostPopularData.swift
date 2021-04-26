@@ -18,6 +18,7 @@ struct MostPopularArticle: Codable, Identifiable {
     var abstract: String
     var views: Int?
 
+    var url: URL?
     var published: String
     var section: String
     var byline: String
@@ -29,6 +30,7 @@ struct MostPopularArticle: Codable, Identifiable {
         case abstract
         case views
 
+        case url
         case published = "published_date"
         case section
         case byline
