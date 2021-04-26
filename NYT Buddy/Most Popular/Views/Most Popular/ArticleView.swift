@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct ArticleView: View {
+    @Environment(\.openURL) var openURL
+
     var article: MostPopularArticle
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10.0) {
-            HStack {
+            HStack(alignment: .center) {
                 Text(article.section)
                     .foregroundColor(.secondary)
                     .bold()
@@ -29,10 +31,13 @@ struct ArticleView: View {
             Text(article.abstract)
                 .font(.body)
 
-            HStack {
-                Spacer()
+            HStack(alignment: .center) {
                 Text(article.byline)
                     .foregroundColor(.secondary)
+                Spacer()
+                Button(action: openFullArticle) {
+                    Text("Full article")
+                }
             }
 
             MediaView(media: article.media)
@@ -41,6 +46,11 @@ struct ArticleView: View {
         }
         .navigationTitle("")
         .padding(.horizontal)
+    }
+
+    func openFullArticle() {
+        guard let url = article.url else { return }
+        openURL(url)
     }
 }
 
