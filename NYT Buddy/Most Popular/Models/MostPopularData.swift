@@ -25,6 +25,10 @@ struct MostPopularArticle: Codable, Identifiable, Hashable {
     var media: [Media]
     var keywords: String
 
+    var keywordsList: [String] {
+        return keywords.split(separator: ";").map({ String($0) })
+    }
+
     enum CodingKeys: String, CodingKey {
         case id
         case title
