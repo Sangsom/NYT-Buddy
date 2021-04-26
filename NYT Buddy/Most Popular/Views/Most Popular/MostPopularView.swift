@@ -10,6 +10,8 @@ import SwiftUI
 struct MostPopularView: View {
     @EnvironmentObject var mostPopularViewModel: MostPopularViewModel
 
+    @State private var selectedArticle: MostPopularArticle?
+
     var body: some View {
             ZStack {
                 VStack(alignment: .leading, spacing: 20) {
@@ -19,14 +21,13 @@ struct MostPopularView: View {
                             self.loadData()
                         })
 
-                    List(mostPopularViewModel.articles) { article in
+                    List(mostPopularViewModel.articles, id: \.self, selection: $selectedArticle) { article in
                         NavigationLink(
                             destination: ArticleView(article: article),
-                            label: {
-                                ArticleListItem(article: article)
-                            })
-
-                    }.onAppear(perform: loadData)
+                            tag: article,
+                            selection: $selectedArticle,
+                            label: {ArticleListItem(article: article)})
+                    }
                 }
                 .blur(radius: mostPopularViewModel.state == .loading ? 4 : 0)
                 .disabled(mostPopularViewModel.state == .loading)
@@ -35,11 +36,17 @@ struct MostPopularView: View {
                     LoadingView()
                 }
             }
+            .onAppear(perform: loadData)
+            .onDisappear(perform: deselectRow)
             .navigationTitle("Most Popular")
     }
 
     private func loadData() {
         mostPopularViewModel.fetchMostPopularArticles()
+    }
+
+    private func deselectRow() {
+        self.selectedArticle = nil
     }
 }
 

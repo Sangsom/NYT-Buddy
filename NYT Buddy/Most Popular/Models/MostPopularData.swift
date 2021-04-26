@@ -12,7 +12,7 @@ struct MostPopularData: Codable {
     let results: [MostPopularArticle]
 }
 
-struct MostPopularArticle: Codable, Identifiable {
+struct MostPopularArticle: Codable, Identifiable, Hashable {
     let id: Int
     var title: String
     var abstract: String
