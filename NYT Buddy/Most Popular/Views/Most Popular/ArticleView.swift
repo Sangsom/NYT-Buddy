@@ -12,14 +12,16 @@ struct ArticleView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10.0) {
+            HStack {
+                Spacer()
+                Text(article.published)
+            }
             Text(article.title)
                 .font(.title)
                 .fontWeight(.medium)
-                .multilineTextAlignment(.leading)
 
             Text(article.abstract)
                 .font(.body)
-                .multilineTextAlignment(.leading)
 
             Spacer()
         }

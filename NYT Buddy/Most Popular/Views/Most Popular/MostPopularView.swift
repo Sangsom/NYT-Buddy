@@ -12,7 +12,7 @@ struct MostPopularView: View {
 
     var body: some View {
             ZStack {
-                VStack(spacing: 20) {
+                VStack(alignment: .leading, spacing: 20) {
                     SelectPeriodView()
                         .padding(.horizontal)
                         .onChange(of: mostPopularViewModel.selectedPeriod, perform: { _ in

@@ -16,12 +16,10 @@ struct ArticleListItem: View {
                 Text(article.title)
                     .font(.title2)
                     .fontWeight(.medium)
-                    .multilineTextAlignment(.leading)
             }
 
             Text(article.abstract)
                 .font(.body)
-                .multilineTextAlignment(.leading)
         }
     }
 }
