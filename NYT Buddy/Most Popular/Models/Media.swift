@@ -7,7 +7,14 @@
 
 import Foundation
 
-struct Media: Codable {
+struct Media: Codable, Equatable, Hashable {
+    static func == (lhs: Media, rhs: Media) -> Bool {
+        return lhs.type == rhs.type &&
+            lhs.subtype == rhs.subtype &&
+            lhs.caption == rhs.caption &&
+            lhs.copyright == rhs.copyright
+    }
+
     var type: String
     var subtype: String
     var caption: String

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MediaMetadata: Codable {
+struct MediaMetadata: Codable, Hashable {
     var url: URL
     var format: String
 }
