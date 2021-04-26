@@ -12,9 +12,7 @@ struct MediaView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Media")
-                .font(.title3)
-                .bold()
+            Divider()
 
             ScrollView(.vertical, showsIndicators: true, content: {
                 ForEach(media, id: \.self) {  mediaItem in
