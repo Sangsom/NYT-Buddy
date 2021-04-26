@@ -21,7 +21,7 @@ struct MostPopularView: View {
 
                     List(mostPopularViewModel.articles) { article in
                         NavigationLink(
-                            destination: Text("Destination"),
+                            destination: ArticleView(article: article),
                             label: {
                                 ArticleListItem(article: article)
                             })
