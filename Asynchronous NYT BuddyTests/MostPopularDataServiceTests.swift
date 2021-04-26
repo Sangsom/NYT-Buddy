@@ -33,6 +33,31 @@ class MostPopularDataServiceTests: XCTestCase {
             return
         }
 
+        let promise = expectation(description: "Status code: 200")
+        let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
+            if error != nil {
+                XCTFail("Error: \(error!.localizedDescription)")
+                return
+            }
+            let statusCode = (response as! HTTPURLResponse).statusCode
+            if statusCode == 200 {
+                promise.fulfill()
+            } else {
+                XCTFail("Status code: \(statusCode)")
+            }
+        }
+
+        dataTask.resume()
+
+        self.waitForExpectations(timeout: 5, handler: nil)
+    }
+
+    func testValidCallToNytWithXCTestExpectation() {
+        guard let url = sut.createURL() else {
+            XCTFail("Invalid URL")
+            return
+        }
+
         var httpResponse: HTTPURLResponse?
         var responseError: Error?
         let promise = expectation(description: "Completion handler invoked")
