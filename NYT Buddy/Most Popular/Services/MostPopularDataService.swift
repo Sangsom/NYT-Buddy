@@ -9,6 +9,7 @@ import Foundation
 
 protocol DataService {
     func fetchMostViewedArticles(completion: @escaping (Result<[MostPopularArticle], NetworkError>) -> Void)
+    func createURL() -> URL?
 }
 
 class MostPopularDataService: DataService {
@@ -32,7 +33,6 @@ class MostPopularDataService: DataService {
                 return completion(.failure(.noData))
             }
 
-
             let response = try? JSONDecoder().decode(MostPopularData.self, from: data)
 
             if let response = response {
@@ -43,7 +43,7 @@ class MostPopularDataService: DataService {
         }.resume()
     }
 
-    private func createURL() -> URL? {
+    func createURL() -> URL? {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "api.nytimes.com"

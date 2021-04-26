@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B625BB126353943009D7C10 /* MostPopularDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B625BB026353943009D7C10 /* MostPopularDataServiceTests.swift */; };
+		1B625BB526353950009D7C10 /* MostPopularDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522982632A90F0082E7C1 /* MostPopularDataService.swift */; };
+		1B625BB92635395D009D7C10 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522AA2632F4CA0082E7C1 /* Period.swift */; };
+		1B625BBD26353980009D7C10 /* MostPopularData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85229B2632A9EF0082E7C1 /* MostPopularData.swift */; };
+		1B625BC12635398C009D7C10 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522BA2633C7510082E7C1 /* NetworkError.swift */; };
+		1B625BC52635398F009D7C10 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522BD2633C77B0082E7C1 /* LoadingState.swift */; };
+		1B625BC9263539A0009D7C10 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522AE2633BD6F0082E7C1 /* AppConstants.swift */; };
 		1B8522812631AD3E0082E7C1 /* NYT_BuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522802631AD3E0082E7C1 /* NYT_BuddyApp.swift */; };
 		1B8522832631AD3E0082E7C1 /* MostPopularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522822631AD3E0082E7C1 /* MostPopularView.swift */; };
 		1B8522852631AD3F0082E7C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B8522842631AD3F0082E7C1 /* Assets.xcassets */; };
@@ -33,6 +40,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1B625BA826353925009D7C10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B8522752631AD3E0082E7C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B85227C2631AD3E0082E7C1;
+			remoteInfo = "NYT Buddy";
+		};
 		1B8522CB2635291B0082E7C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1B8522752631AD3E0082E7C1 /* Project object */;
@@ -43,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B625BA326353925009D7C10 /* Asynchronous NYT BuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Asynchronous NYT BuddyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B625BA726353925009D7C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B625BB026353943009D7C10 /* MostPopularDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularDataServiceTests.swift; sourceTree = "<group>"; };
 		1B85227D2631AD3E0082E7C1 /* NYT Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYT Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8522802631AD3E0082E7C1 /* NYT_BuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYT_BuddyApp.swift; sourceTree = "<group>"; };
 		1B8522822631AD3E0082E7C1 /* MostPopularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularView.swift; sourceTree = "<group>"; };
@@ -66,6 +83,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1B625BA026353925009D7C10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1B85227A2631AD3E0082E7C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,11 +107,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B625BA426353925009D7C10 /* Asynchronous NYT BuddyTests */ = {
+			isa = PBXGroup;
+			children = (
+				1B625BB026353943009D7C10 /* MostPopularDataServiceTests.swift */,
+				1B625BA726353925009D7C10 /* Info.plist */,
+			);
+			path = "Asynchronous NYT BuddyTests";
+			sourceTree = "<group>";
+		};
 		1B8522742631AD3E0082E7C1 = {
 			isa = PBXGroup;
 			children = (
 				1B85227F2631AD3E0082E7C1 /* NYT Buddy */,
 				1B8522C72635291B0082E7C1 /* NYT BuddyTests */,
+				1B625BA426353925009D7C10 /* Asynchronous NYT BuddyTests */,
 				1B85227E2631AD3E0082E7C1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,6 +131,7 @@
 			children = (
 				1B85227D2631AD3E0082E7C1 /* NYT Buddy.app */,
 				1B8522C62635291B0082E7C1 /* NYT BuddyTests.xctest */,
+				1B625BA326353925009D7C10 /* Asynchronous NYT BuddyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,6 +259,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1B625BA226353925009D7C10 /* Asynchronous NYT BuddyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B625BAA26353925009D7C10 /* Build configuration list for PBXNativeTarget "Asynchronous NYT BuddyTests" */;
+			buildPhases = (
+				1B625B9F26353925009D7C10 /* Sources */,
+				1B625BA026353925009D7C10 /* Frameworks */,
+				1B625BA126353925009D7C10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B625BA926353925009D7C10 /* PBXTargetDependency */,
+			);
+			name = "Asynchronous NYT BuddyTests";
+			productName = "Asynchronous NYT BuddyTests";
+			productReference = 1B625BA326353925009D7C10 /* Asynchronous NYT BuddyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		1B85227C2631AD3E0082E7C1 /* NYT Buddy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B85228C2631AD3F0082E7C1 /* Build configuration list for PBXNativeTarget "NYT Buddy" */;
@@ -268,6 +321,10 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					1B625BA226353925009D7C10 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 1B85227C2631AD3E0082E7C1;
+					};
 					1B85227C2631AD3E0082E7C1 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -292,11 +349,19 @@
 			targets = (
 				1B85227C2631AD3E0082E7C1 /* NYT Buddy */,
 				1B8522C52635291B0082E7C1 /* NYT BuddyTests */,
+				1B625BA226353925009D7C10 /* Asynchronous NYT BuddyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1B625BA126353925009D7C10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1B85227B2631AD3E0082E7C1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -316,6 +381,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1B625B9F26353925009D7C10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B625BB526353950009D7C10 /* MostPopularDataService.swift in Sources */,
+				1B625BC52635398F009D7C10 /* LoadingState.swift in Sources */,
+				1B625BBD26353980009D7C10 /* MostPopularData.swift in Sources */,
+				1B625BC9263539A0009D7C10 /* AppConstants.swift in Sources */,
+				1B625BB126353943009D7C10 /* MostPopularDataServiceTests.swift in Sources */,
+				1B625BC12635398C009D7C10 /* NetworkError.swift in Sources */,
+				1B625BB92635395D009D7C10 /* Period.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1B8522792631AD3E0082E7C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,6 +433,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1B625BA926353925009D7C10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B85227C2631AD3E0082E7C1 /* NYT Buddy */;
+			targetProxy = 1B625BA826353925009D7C10 /* PBXContainerItemProxy */;
+		};
 		1B8522CC2635291B0082E7C1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1B85227C2631AD3E0082E7C1 /* NYT Buddy */;
@@ -362,6 +446,46 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1B625BAB26353925009D7C10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M86S59A27L;
+				INFOPLIST_FILE = "Asynchronous NYT BuddyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.domanov.Asynchronous-NYT-BuddyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NYT Buddy.app/NYT Buddy";
+			};
+			name = Debug;
+		};
+		1B625BAC26353925009D7C10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M86S59A27L;
+				INFOPLIST_FILE = "Asynchronous NYT BuddyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.domanov.Asynchronous-NYT-BuddyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NYT Buddy.app/NYT Buddy";
+			};
+			name = Release;
+		};
 		1B85228A2631AD3F0082E7C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -565,6 +689,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1B625BAA26353925009D7C10 /* Build configuration list for PBXNativeTarget "Asynchronous NYT BuddyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B625BAB26353925009D7C10 /* Debug */,
+				1B625BAC26353925009D7C10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1B8522782631AD3E0082E7C1 /* Build configuration list for PBXProject "NYT Buddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
