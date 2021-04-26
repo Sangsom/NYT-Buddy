@@ -28,6 +28,12 @@ struct ArticleView: View {
             Text(article.abstract)
                 .font(.body)
 
+            HStack {
+                Spacer()
+                Text(article.byline)
+                    .foregroundColor(.secondary)
+            }
+
             Spacer()
         }
         .navigationTitle("")
