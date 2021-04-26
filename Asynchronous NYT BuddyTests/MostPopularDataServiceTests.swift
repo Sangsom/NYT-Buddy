@@ -33,18 +33,17 @@ class MostPopularDataServiceTests: XCTestCase {
             return
         }
 
-        let promise = expectation(description: "Status code: 200")
+        var httpResponse: HTTPURLResponse?
+        var responseError: Error?
+        let promise = expectation(description: "Completion handler invoked")
         let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
-            if error != nil {
-                XCTFail("Error: \(error!.localizedDescription)")
-                return
-            }
-            let statusCode = (response as! HTTPURLResponse).statusCode
-            if statusCode == 200 {
-                promise.fulfill()
-            } else {
-                XCTFail("Status code: \(statusCode)")
-            }
+
+            httpResponse = response as? HTTPURLResponse
+            responseError = error
+            promise.fulfill()
+
+            XCTAssertNil(responseError)
+            XCTAssertEqual(httpResponse?.statusCode, 200)
         }
 
         dataTask.resume()
