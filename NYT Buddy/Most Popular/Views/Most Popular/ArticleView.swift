@@ -16,6 +16,7 @@ struct ArticleView: View {
                 Text(article.section)
                     .foregroundColor(.secondary)
                     .bold()
+                    .underline(true, color: .red)
 
                 Spacer()
                 Text(article.published)
@@ -33,6 +34,8 @@ struct ArticleView: View {
                 Text(article.byline)
                     .foregroundColor(.secondary)
             }
+
+            MediaView(media: article.media)
 
             Spacer()
         }
