@@ -8,7 +8,7 @@
 import Foundation
 
 protocol DataService {
-    func fetchMostViewedArticles(completion: @escaping (Result<[MostPopularArticle], NetworkError>) -> Void)
+    func fetchMostViewedArticles(completion: @escaping (Result<[ViewedArticle], NetworkError>) -> Void)
     func createURL() -> URL?
 }
 
@@ -21,7 +21,7 @@ class MostPopularDataService: DataService {
     }
 
     // MARK: - Custom methods
-    func fetchMostViewedArticles(completion: @escaping (Result<[MostPopularArticle], NetworkError>) -> Void) {
+    func fetchMostViewedArticles(completion: @escaping (Result<[ViewedArticle], NetworkError>) -> Void) {
         guard let url = createURL() else {
             return completion(.failure(.badURL))
         }

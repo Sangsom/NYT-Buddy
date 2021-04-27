@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ArticleListItem: View {
-    var article: MostPopularArticle
+    var article: ViewedArticle
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8.0) {
@@ -26,7 +26,7 @@ struct ArticleListItem: View {
 
 struct ArticleListItem_Previews: PreviewProvider {
     static var previews: some View {
-        ArticleListItem(article: MostPopularArticle.exampleData.first!)
+        ArticleListItem(article: ViewedArticle.exampleData.first!)
             .previewLayout(.sizeThatFits)
     }
 }
