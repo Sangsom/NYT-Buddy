@@ -8,8 +8,14 @@
 import Foundation
 
 protocol DataService {
-    func fetchMostViewedArticles(completion: @escaping (Result<[ViewedArticle], NetworkError>) -> Void)
-    func createURL() -> URL?
+    func fetchMostViewedArticles(for type: MostPopularArticleType, completion: @escaping (Result<[ViewedArticle], NetworkError>) -> Void)
+    func createURL(for type: MostPopularArticleType) -> URL?
+}
+
+enum MostPopularArticleType {
+    case viewed
+    case emailed
+    case shared
 }
 
 class MostPopularDataService: DataService {
@@ -21,8 +27,9 @@ class MostPopularDataService: DataService {
     }
 
     // MARK: - Custom methods
-    func fetchMostViewedArticles(completion: @escaping (Result<[ViewedArticle], NetworkError>) -> Void) {
-        guard let url = createURL() else {
+    func fetchMostViewedArticles(for type: MostPopularArticleType, completion: @escaping (Result<[ViewedArticle], NetworkError>) -> Void) {
+
+        guard let url = createURL(for: type) else {
             return completion(.failure(.badURL))
         }
 
@@ -43,11 +50,19 @@ class MostPopularDataService: DataService {
         }.resume()
     }
 
-    func createURL() -> URL? {
+    func createURL(for type: MostPopularArticleType) -> URL? {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "api.nytimes.com"
-        urlComponents.path = "/svc/mostpopular/v2/viewed/\(period).json"
+
+        switch type {
+        case .viewed:
+            urlComponents.path = "/svc/mostpopular/v2/viewed/\(period).json"
+        case .emailed:
+            urlComponents.path = "/svc/mostpopular/v2/emailed/\(period).json"
+        case .shared:
+            urlComponents.path = "/svc/mostpopular/v2/shared/\(period)/facebook.json"
+        }
 
         let apiQueryItem = URLQueryItem(name: "api-key", value: Constants.API.NYT_API_KEY)
         urlComponents.queryItems = [apiQueryItem]

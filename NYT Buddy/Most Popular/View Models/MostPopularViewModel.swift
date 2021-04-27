@@ -18,6 +18,11 @@ class MostPopularViewModel: ObservableObject {
         }
     }
     @Published private(set) var state = LoadingState.idle
+    @Published var selectedArticleType: MostPopularArticleType = .viewed {
+        didSet {
+            fetchMostPopularArticles()
+        }
+    }
 
     // MARK: - Init
     init() {
@@ -28,7 +33,7 @@ class MostPopularViewModel: ObservableObject {
     func fetchMostPopularArticles() {
         state = .loading
 
-        mostPopularDataService?.fetchMostViewedArticles { result in
+        mostPopularDataService?.fetchMostViewedArticles(for: selectedArticleType) { result in
             switch result {
             case .success(let articles):
                 DispatchQueue.main.async {

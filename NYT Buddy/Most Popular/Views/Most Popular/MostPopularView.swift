@@ -53,13 +53,13 @@ struct MostPopularView: View {
                     buttons: [
                         .cancel(),
                         .default(Text("Most emailed articles"), action: {
-                            print("Get most emailed articles")
+                            mostPopularViewModel.selectedArticleType = .emailed
                         }),
                         .default(Text("Most shared articles on Facebook"), action: {
-                            print("Get most shared articles on Facebook")
+                            mostPopularViewModel.selectedArticleType = .shared
                         }),
                         .default(Text("Most viewed articles"), action: {
-                            print("Get most viewed articles")
+                            mostPopularViewModel.selectedArticleType = .viewed
                         })
                     ])
             })
