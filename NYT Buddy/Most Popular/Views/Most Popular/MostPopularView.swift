@@ -10,6 +10,8 @@ import SwiftUI
 struct MostPopularView: View {
     @EnvironmentObject var mostPopularViewModel: MostPopularViewModel
 
+    @State private var showActionSheet = false
+
     var body: some View {
             ZStack {
                 VStack(alignment: .leading, spacing: 20) {
@@ -35,6 +37,32 @@ struct MostPopularView: View {
             }
             .onAppear(perform: loadData)
             .navigationTitle("Most Popular")
+            .navigationBarItems(trailing:
+                    Button(action: {
+                        showActionSheet = true
+                    }, label: {
+                        Image(systemName: "line.horizontal.3.decrease.circle")
+                    }
+                )
+                .buttonStyle(PlainButtonStyle())
+            )
+            .actionSheet(isPresented: $showActionSheet, content: {
+                ActionSheet(
+                    title: Text("Get most popular articles"),
+                    message: nil,
+                    buttons: [
+                        .cancel(),
+                        .default(Text("Most emailed articles"), action: {
+                            print("Get most emailed articles")
+                        }),
+                        .default(Text("Most shared articles on Facebook"), action: {
+                            print("Get most shared articles on Facebook")
+                        }),
+                        .default(Text("Most viewed articles"), action: {
+                            print("Get most viewed articles")
+                        })
+                    ])
+            })
     }
 
     private func loadData() {
