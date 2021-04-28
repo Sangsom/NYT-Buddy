@@ -159,6 +159,14 @@
 			path = "Top Stories";
 			sourceTree = "<group>";
 		};
+		1B748DFC263992830024CCD1 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				1B8522A82632F4AE0082E7C1 /* Common */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		1B8522742631AD3E0082E7C1 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +190,7 @@
 		1B85227F2631AD3E0082E7C1 /* NYT Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				1B748DFC263992830024CCD1 /* Shared */,
 				1B748DF8263991AA0024CCD1 /* Features */,
 				1B8522802631AD3E0082E7C1 /* NYT_BuddyApp.swift */,
 				1B8522842631AD3F0082E7C1 /* Assets.xcassets */,
@@ -202,7 +211,6 @@
 		1B8522902631B1EE0082E7C1 /* Most Popular */ = {
 			isa = PBXGroup;
 			children = (
-				1B8522A82632F4AE0082E7C1 /* Common */,
 				1B8522962631B5D90082E7C1 /* Models */,
 				1B8522952631B5D20082E7C1 /* Services */,
 				1B8522972631B5E00082E7C1 /* View Models */,
