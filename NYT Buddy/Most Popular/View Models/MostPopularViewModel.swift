@@ -33,7 +33,7 @@ class MostPopularViewModel: ObservableObject {
     func fetchMostPopularArticles() {
         state = .loading
 
-        mostPopularDataService?.fetchMostViewedArticles(for: selectedArticleType) { result in
+        mostPopularDataService?.fetchMostPopularArticles(for: selectedArticleType) { result in
             switch result {
             case .success(let articles):
                 DispatchQueue.main.async {
