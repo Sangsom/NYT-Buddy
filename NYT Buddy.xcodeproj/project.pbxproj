@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B570377263943AD00BCB707 /* MostPopularArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B570376263943AC00BCB707 /* MostPopularArticle.swift */; };
 		1B625BB126353943009D7C10 /* MostPopularDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B625BB026353943009D7C10 /* MostPopularDataServiceTests.swift */; };
 		1B625BB526353950009D7C10 /* MostPopularDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522982632A90F0082E7C1 /* MostPopularDataService.swift */; };
 		1B625BB92635395D009D7C10 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522AA2632F4CA0082E7C1 /* Period.swift */; };
@@ -63,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B570376263943AC00BCB707 /* MostPopularArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticle.swift; sourceTree = "<group>"; };
 		1B625BA326353925009D7C10 /* Asynchronous NYT BuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Asynchronous NYT BuddyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B625BA726353925009D7C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B625BB026353943009D7C10 /* MostPopularDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularDataServiceTests.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				1B85229B2632A9EF0082E7C1 /* MostPopularData.swift */,
+				1B570376263943AC00BCB707 /* MostPopularArticle.swift */,
 				1B625BDE2636BC88009D7C10 /* MediaMetadata.swift */,
 				1B625BD92636BBBB009D7C10 /* Media.swift */,
 			);
@@ -424,6 +427,7 @@
 				1B8522992632A90F0082E7C1 /* MostPopularDataService.swift in Sources */,
 				1B8522832631AD3E0082E7C1 /* MostPopularView.swift in Sources */,
 				1B625BEE2636FBD0009D7C10 /* KeywordsListView.swift in Sources */,
+				1B570377263943AD00BCB707 /* MostPopularArticle.swift in Sources */,
 				1B8522AF2633BD6F0082E7C1 /* AppConstants.swift in Sources */,
 				1B8522A62632D4150082E7C1 /* ArticleListItem.swift in Sources */,
 				1B85229F2632C19D0082E7C1 /* MostPopularViewModel.swift in Sources */,
