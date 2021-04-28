@@ -27,11 +27,16 @@ struct NYT_BuddyApp: App {
                             Text("Popular Articles")
                         }
 
-                        Text("Tab Content 2").tabItem {
+                        NavigationView {
+                            TopStoriesView()
+                        }
+                        .tag(1)
+                        .tabItem {
                             Image(systemName: "scroll")
-                            Text("Top Stories") }.tag(1)
-                    })
-
+                            Text("Top Stories")
+                        }
+                    }
+            )
         }
     }
 }
