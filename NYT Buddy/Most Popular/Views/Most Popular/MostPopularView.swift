@@ -78,7 +78,9 @@ struct MostPopularView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MostPopularView()
-            .environmentObject(MostPopularViewModel())
+        NavigationView {
+            MostPopularView()
+                .environmentObject(MostPopularViewModel())
+        }
     }
 }

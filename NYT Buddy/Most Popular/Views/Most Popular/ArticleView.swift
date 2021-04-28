@@ -16,7 +16,6 @@ struct ArticleView: View {
         VStack(alignment: .leading, spacing: 10.0) {
             HStack(alignment: .center) {
                 Text(article.section)
-                    .foregroundColor(.secondary)
                     .bold()
                     .underline(true, color: .red)
 
@@ -24,15 +23,15 @@ struct ArticleView: View {
                    !subsection.isEmpty {
                     Image(systemName: "arrow.right")
                     Text(subsection)
-                        .foregroundColor(.secondary)
                         .bold()
                         .underline(true, color: .red)
                 }
 
                 Spacer()
                 Text(article.published)
-                    .foregroundColor(.secondary)
             }
+            .padding(.top)
+            .foregroundColor(Color("AccentColor"))
 
             KeywordsListView(keywords: article.keywordsList)
 
@@ -56,7 +55,7 @@ struct ArticleView: View {
 
             Spacer()
         }
-        .navigationTitle("")
+        .navigationBarTitle("", displayMode: .inline)
         .padding(.horizontal)
     }
 
@@ -68,6 +67,9 @@ struct ArticleView: View {
 
 struct ArticleView_Previews: PreviewProvider {
     static var previews: some View {
-        ArticleView(article: MostPopularArticle.exampleData.first!)
+        NavigationView {
+            ArticleView(article: MostPopularArticle.exampleData.first!)
+                .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
