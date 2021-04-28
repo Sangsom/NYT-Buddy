@@ -11,6 +11,7 @@ struct MostPopularView: View {
     @EnvironmentObject var mostPopularViewModel: MostPopularViewModel
 
     @State private var showActionSheet = false
+    @State private var title = "Most Popular Articles"
 
     var body: some View {
             ZStack {
@@ -36,7 +37,7 @@ struct MostPopularView: View {
                 }
             }
             .onAppear(perform: loadData)
-            .navigationTitle("Most Popular")
+            .navigationTitle(title)
             .navigationBarItems(trailing:
                     Button(action: {
                         showActionSheet = true
@@ -54,12 +55,15 @@ struct MostPopularView: View {
                         .cancel(),
                         .default(Text("Most emailed articles"), action: {
                             mostPopularViewModel.selectedArticleType = .emailed
+                            title = "Most Emailed Articles"
                         }),
                         .default(Text("Most shared articles on Facebook"), action: {
                             mostPopularViewModel.selectedArticleType = .shared
+                            title = "Most Shared Articles"
                         }),
                         .default(Text("Most viewed articles"), action: {
                             mostPopularViewModel.selectedArticleType = .viewed
+                            title = "Most Viewed Articles"
                         })
                     ])
             })
