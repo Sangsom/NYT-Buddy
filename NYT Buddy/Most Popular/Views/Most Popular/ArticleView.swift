@@ -20,6 +20,15 @@ struct ArticleView: View {
                     .bold()
                     .underline(true, color: .red)
 
+                if let subsection = article.subsection,
+                   !subsection.isEmpty {
+                    Image(systemName: "arrow.right")
+                    Text(subsection)
+                        .foregroundColor(.secondary)
+                        .bold()
+                        .underline(true, color: .red)
+                }
+
                 Spacer()
                 Text(article.published)
                     .foregroundColor(.secondary)
