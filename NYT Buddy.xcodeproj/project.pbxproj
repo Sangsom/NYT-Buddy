@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B570377263943AD00BCB707 /* MostPopularArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B570376263943AC00BCB707 /* MostPopularArticle.swift */; };
+		1B570379263943EB00BCB707 /* MostPopularArticleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B570378263943EB00BCB707 /* MostPopularArticleType.swift */; };
 		1B625BB126353943009D7C10 /* MostPopularDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B625BB026353943009D7C10 /* MostPopularDataServiceTests.swift */; };
 		1B625BB526353950009D7C10 /* MostPopularDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522982632A90F0082E7C1 /* MostPopularDataService.swift */; };
 		1B625BB92635395D009D7C10 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522AA2632F4CA0082E7C1 /* Period.swift */; };
@@ -65,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		1B570376263943AC00BCB707 /* MostPopularArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticle.swift; sourceTree = "<group>"; };
+		1B570378263943EB00BCB707 /* MostPopularArticleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticleType.swift; sourceTree = "<group>"; };
 		1B625BA326353925009D7C10 /* Asynchronous NYT BuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Asynchronous NYT BuddyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B625BA726353925009D7C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B625BB026353943009D7C10 /* MostPopularDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularDataServiceTests.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				1B8522AA2632F4CA0082E7C1 /* Period.swift */,
 				1B8522BA2633C7510082E7C1 /* NetworkError.swift */,
 				1B8522BD2633C77B0082E7C1 /* LoadingState.swift */,
+				1B570378263943EB00BCB707 /* MostPopularArticleType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				1B8522BE2633C77B0082E7C1 /* LoadingState.swift in Sources */,
 				1B625BE92636BE91009D7C10 /* MediaView.swift in Sources */,
 				1B85229C2632A9EF0082E7C1 /* MostPopularData.swift in Sources */,
+				1B570379263943EB00BCB707 /* MostPopularArticleType.swift in Sources */,
 				1B625BDA2636BBBB009D7C10 /* Media.swift in Sources */,
 				1B8522992632A90F0082E7C1 /* MostPopularDataService.swift in Sources */,
 				1B8522832631AD3E0082E7C1 /* MostPopularView.swift in Sources */,

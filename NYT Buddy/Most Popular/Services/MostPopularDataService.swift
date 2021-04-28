@@ -12,12 +12,6 @@ protocol DataService {
     func createURL(for type: MostPopularArticleType) -> URL?
 }
 
-enum MostPopularArticleType {
-    case viewed
-    case emailed
-    case shared
-}
-
 class MostPopularDataService: DataService {
     // MARK: - Properties
     private(set) var period: Period.RawValue
