@@ -17,7 +17,7 @@ struct ArticleView: View {
             HStack(alignment: .center) {
                 Text(article.section)
                     .bold()
-                    .underline(true, color: .red)
+                    .underline(true, color: Color("UnderlineColor"))
 
                 if let subsection = article.subsection,
                    !subsection.isEmpty {
