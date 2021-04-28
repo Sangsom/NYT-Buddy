@@ -11,7 +11,7 @@ class MostPopularViewModel: ObservableObject {
     // MARK: - Properties
     var mostPopularDataService: MostPopularDataService?
 
-    @Published var articles = [ViewedArticle]()
+    @Published var articles = [MostPopularArticle]()
     @Published var selectedPeriod = Period.daily.rawValue {
         didSet {
             mostPopularDataService?.updatePeriod(selectedPeriod)

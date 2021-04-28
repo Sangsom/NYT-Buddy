@@ -10,7 +10,7 @@ import SwiftUI
 struct ArticleView: View {
     @Environment(\.openURL) var openURL
 
-    var article: ViewedArticle
+    var article: MostPopularArticle
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10.0) {
@@ -59,6 +59,6 @@ struct ArticleView: View {
 
 struct ArticleView_Previews: PreviewProvider {
     static var previews: some View {
-        ArticleView(article: ViewedArticle.exampleData.first!)
+        ArticleView(article: MostPopularArticle.exampleData.first!)
     }
 }
