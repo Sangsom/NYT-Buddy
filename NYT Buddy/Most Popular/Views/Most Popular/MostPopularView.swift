@@ -46,6 +46,8 @@ struct MostPopularView: View {
                     }
                 )
                 .buttonStyle(PlainButtonStyle())
+                .foregroundColor(Color("AccentColor"))
+
             )
             .actionSheet(isPresented: $showActionSheet, content: {
                 ActionSheet(
