@@ -156,7 +156,7 @@
 		1B748DF9263991B40024CCD1 /* Top Stories */ = {
 			isa = PBXGroup;
 			children = (
-				1B748DFA263991D70024CCD1 /* TopStoriesView.swift */,
+				1B748DFF263997560024CCD1 /* Views */,
 			);
 			path = "Top Stories";
 			sourceTree = "<group>";
@@ -167,6 +167,14 @@
 				1B8522A82632F4AE0082E7C1 /* Common */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		1B748DFF263997560024CCD1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B748DFA263991D70024CCD1 /* TopStoriesView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		1B8522742631AD3E0082E7C1 = {
