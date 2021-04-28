@@ -10,6 +10,10 @@ import SwiftUI
 struct TopStoriesView: View {
     var body: some View {
         Text("Top Stories, Welcome")
+            .onAppear {
+                var topStories = TopStoriesDataService()
+                print(topStories.createURL(for: .books))
+            }
     }
 }
 

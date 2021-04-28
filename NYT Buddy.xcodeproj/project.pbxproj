@@ -32,6 +32,7 @@
 		1B625BEE2636FBD0009D7C10 /* KeywordsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B625BED2636FBD0009D7C10 /* KeywordsListView.swift */; };
 		1B748DFB263991D70024CCD1 /* TopStoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B748DFA263991D70024CCD1 /* TopStoriesView.swift */; };
 		1B748DFE263995A60024CCD1 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B748DFD263995A50024CCD1 /* Section.swift */; };
+		1B748E02263997A90024CCD1 /* TopStoriesDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B748E01263997A90024CCD1 /* TopStoriesDataService.swift */; };
 		1B8522812631AD3E0082E7C1 /* NYT_BuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522802631AD3E0082E7C1 /* NYT_BuddyApp.swift */; };
 		1B8522832631AD3E0082E7C1 /* MostPopularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522822631AD3E0082E7C1 /* MostPopularView.swift */; };
 		1B8522852631AD3F0082E7C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B8522842631AD3F0082E7C1 /* Assets.xcassets */; };
@@ -88,6 +89,7 @@
 		1B625BED2636FBD0009D7C10 /* KeywordsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordsListView.swift; sourceTree = "<group>"; };
 		1B748DFA263991D70024CCD1 /* TopStoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesView.swift; sourceTree = "<group>"; };
 		1B748DFD263995A50024CCD1 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		1B748E01263997A90024CCD1 /* TopStoriesDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesDataService.swift; sourceTree = "<group>"; };
 		1B85227D2631AD3E0082E7C1 /* NYT Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYT Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8522802631AD3E0082E7C1 /* NYT_BuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYT_BuddyApp.swift; sourceTree = "<group>"; };
 		1B8522822631AD3E0082E7C1 /* MostPopularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularView.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		1B748DF9263991B40024CCD1 /* Top Stories */ = {
 			isa = PBXGroup;
 			children = (
+				1B748E002639978D0024CCD1 /* Services */,
 				1B748DFF263997560024CCD1 /* Views */,
 			);
 			path = "Top Stories";
@@ -175,6 +178,14 @@
 				1B748DFA263991D70024CCD1 /* TopStoriesView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1B748E002639978D0024CCD1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1B748E01263997A90024CCD1 /* TopStoriesDataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		1B8522742631AD3E0082E7C1 = {
@@ -481,6 +492,7 @@
 				1B8522992632A90F0082E7C1 /* MostPopularDataService.swift in Sources */,
 				1B8522832631AD3E0082E7C1 /* MostPopularView.swift in Sources */,
 				1B625BEE2636FBD0009D7C10 /* KeywordsListView.swift in Sources */,
+				1B748E02263997A90024CCD1 /* TopStoriesDataService.swift in Sources */,
 				1B570377263943AD00BCB707 /* MostPopularArticle.swift in Sources */,
 				1B8522AF2633BD6F0082E7C1 /* AppConstants.swift in Sources */,
 				1B8522A62632D4150082E7C1 /* ArticleListItem.swift in Sources */,
