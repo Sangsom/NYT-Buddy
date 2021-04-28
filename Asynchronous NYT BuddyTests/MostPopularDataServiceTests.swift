@@ -22,13 +22,23 @@ class MostPopularDataServiceTests: XCTestCase {
         super.tearDown()
     }
 
-    func testCreateURLReturnsCorrectURL() {
-        let result = sut.createURL()
-        XCTAssertEqual(result, URL(string: "https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=10se5TvsUG7aG7rr31AxOcme0SEZOQ9q"), "URL is created incorrectly")
+    func testCreateURLForViewedTypeReturnsCorrectURL() {
+        let result = sut.createURL(for: .viewed)
+        XCTAssertEqual(result, URL(string: "https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=10se5TvsUG7aG7rr31AxOcme0SEZOQ9q"))
     }
 
-    func testValidCallToNYTReturnStatusCode200() {
-        guard let url = sut.createURL() else {
+    func testCreateURLForEmailedTypeReturnsCorrectURL() {
+        let result = sut.createURL(for: .emailed)
+        XCTAssertEqual(result, URL(string: "https://api.nytimes.com/svc/mostpopular/v2/emailed/1.json?api-key=10se5TvsUG7aG7rr31AxOcme0SEZOQ9q"))
+    }
+
+    func testCreateURLForSharedTypeReturnsCorrectURL() {
+        let result = sut.createURL(for: .shared)
+        XCTAssertEqual(result, URL(string: "https://api.nytimes.com/svc/mostpopular/v2/shared/1/facebook.json?api-key=10se5TvsUG7aG7rr31AxOcme0SEZOQ9q"))
+    }
+
+    func testValidCallToNYTMostViewedArticlesReturnStatusCode200() {
+        guard let url = sut.createURL(for: .viewed) else {
             XCTFail("Invalid URL")
             return
         }
@@ -52,8 +62,8 @@ class MostPopularDataServiceTests: XCTestCase {
         self.waitForExpectations(timeout: 5, handler: nil)
     }
 
-    func testValidCallToNytWithXCTestExpectation() {
-        guard let url = sut.createURL() else {
+    func testValidCallToNYTMostEmailedArticlesWithXCTestExpectation() {
+        guard let url = sut.createURL(for: .emailed) else {
             XCTFail("Invalid URL")
             return
         }
