@@ -12,3 +12,12 @@ struct StoryData: Codable {
     let section: String
     let results: [Story]
 }
+
+#if DEBUG
+extension StoryData {
+    static let exampleData = StoryData(
+        status: "OK",
+        section: "Arts",
+        results: Array(repeating: Story.exampleData, count: 5))
+}
+#endif

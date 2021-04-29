@@ -183,8 +183,8 @@
 			children = (
 				1B748E0E263ACB900024CCD1 /* Models */,
 				1B748E002639978D0024CCD1 /* Services */,
-				1B748DFF263997560024CCD1 /* Views */,
 				1B748E09263A93A30024CCD1 /* View Models */,
+				1B748DFF263997560024CCD1 /* Views */,
 			);
 			path = "Top Stories";
 			sourceTree = "<group>";
@@ -224,8 +224,8 @@
 		1B748E0E263ACB900024CCD1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1B748E0F263ACBA00024CCD1 /* Story.swift */,
 				1B748E13263ACEDB0024CCD1 /* StoryData.swift */,
+				1B748E0F263ACBA00024CCD1 /* Story.swift */,
 				1B748E17263ACEED0024CCD1 /* Multimedia.swift */,
 			);
 			path = Models;
