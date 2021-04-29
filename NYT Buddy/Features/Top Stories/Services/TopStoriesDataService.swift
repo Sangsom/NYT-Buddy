@@ -8,7 +8,7 @@
 import Foundation
 
 class TopStoriesDataService {
-    func fetchTopStories(for section: Section, completion: @escaping (Result<[MostPopularArticle], NetworkError>) -> Void) {
+    func fetchTopStories(for section: Section, completion: @escaping (Result<[Story], NetworkError>) -> Void) {
 
         guard let url = createURL(for: section)  else {
             return completion(.failure(.badURL))
@@ -21,7 +21,11 @@ class TopStoriesDataService {
                 return completion(.failure(.noData))
             }
 
-            let response = try? JSONDecoder().decode(MostPopularData.self, from: data)
+            print("Data", data)
+
+            let response = try? JSONDecoder().decode(StoryData.self, from: data)
+
+            print("Response", response)
 
             if let response = response {
                 completion(.success(response.results))
