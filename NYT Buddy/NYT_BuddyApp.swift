@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct NYT_BuddyApp: App {
     @StateObject var mostPopularViewModel = MostPopularViewModel()
+    @StateObject var topStoriesViewModel = TopStoriesViewModel()
 
     @State private var selectedTab = 0
 
@@ -29,6 +30,7 @@ struct NYT_BuddyApp: App {
 
                         NavigationView {
                             TopStoriesView()
+                                .environmentObject(topStoriesViewModel)
                         }
                         .tag(1)
                         .tabItem {

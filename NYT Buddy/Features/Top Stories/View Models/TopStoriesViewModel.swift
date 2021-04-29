@@ -11,7 +11,7 @@ class TopStoriesViewModel: ObservableObject {
     // MARK: - Properties
     var topStoriesDataService: TopStoriesDataService?
 
-    @Published var stories = [MostPopularArticle]()
+    @Published var stories = [Story]()
 
     // MARK: - Init
     init() {
@@ -27,7 +27,7 @@ class TopStoriesViewModel: ObservableObject {
                     self.stories = stories
                 }
             case .failure(let error):
-                print("Failed to fetch stroies data: \(error.localizedDescription)")
+                print("Failed to fetch stories data: \(error.localizedDescription)")
             }
         })
     }

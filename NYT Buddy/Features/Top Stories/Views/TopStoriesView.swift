@@ -8,12 +8,20 @@
 import SwiftUI
 
 struct TopStoriesView: View {
+    @EnvironmentObject var topStoriesViewModel: TopStoriesViewModel
+
     var body: some View {
-        Text("Top Stories, Welcome")
-            .onAppear {
-                var topStories = TopStoriesDataService()
-                print(topStories.createURL(for: .books))
+        VStack {
+            List(topStoriesViewModel.stories, id: \.self) { story in
+                Text(story.title)
             }
+        }
+        .onAppear(perform: loadData)
+    }
+
+    // MARK: - Custom methods
+    private func loadData() {
+        topStoriesViewModel.fetchTopStories()
     }
 }
 
