@@ -38,6 +38,9 @@
 		1B748E0626399D530024CCD1 /* TopStoriesDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B748E01263997A90024CCD1 /* TopStoriesDataService.swift */; };
 		1B748E0726399D570024CCD1 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B748DFD263995A50024CCD1 /* Section.swift */; };
 		1B748E0826399D570024CCD1 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B748DFD263995A50024CCD1 /* Section.swift */; };
+		1B748E0B263A93C20024CCD1 /* TopStoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B748E0A263A93C20024CCD1 /* TopStoriesViewModel.swift */; };
+		1B748E0C263A93C20024CCD1 /* TopStoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B748E0A263A93C20024CCD1 /* TopStoriesViewModel.swift */; };
+		1B748E0D263A93C20024CCD1 /* TopStoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B748E0A263A93C20024CCD1 /* TopStoriesViewModel.swift */; };
 		1B8522812631AD3E0082E7C1 /* NYT_BuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522802631AD3E0082E7C1 /* NYT_BuddyApp.swift */; };
 		1B8522832631AD3E0082E7C1 /* MostPopularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522822631AD3E0082E7C1 /* MostPopularView.swift */; };
 		1B8522852631AD3F0082E7C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B8522842631AD3F0082E7C1 /* Assets.xcassets */; };
@@ -96,6 +99,7 @@
 		1B748DFD263995A50024CCD1 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		1B748E01263997A90024CCD1 /* TopStoriesDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesDataService.swift; sourceTree = "<group>"; };
 		1B748E0326399D490024CCD1 /* TopStoriesDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesDataServiceTests.swift; sourceTree = "<group>"; };
+		1B748E0A263A93C20024CCD1 /* TopStoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesViewModel.swift; sourceTree = "<group>"; };
 		1B85227D2631AD3E0082E7C1 /* NYT Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYT Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8522802631AD3E0082E7C1 /* NYT_BuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYT_BuddyApp.swift; sourceTree = "<group>"; };
 		1B8522822631AD3E0082E7C1 /* MostPopularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularView.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 			children = (
 				1B748E002639978D0024CCD1 /* Services */,
 				1B748DFF263997560024CCD1 /* Views */,
+				1B748E09263A93A30024CCD1 /* View Models */,
 			);
 			path = "Top Stories";
 			sourceTree = "<group>";
@@ -193,6 +198,14 @@
 				1B748E01263997A90024CCD1 /* TopStoriesDataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		1B748E09263A93A30024CCD1 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B748E0A263A93C20024CCD1 /* TopStoriesViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 		1B8522742631AD3E0082E7C1 = {
@@ -477,6 +490,7 @@
 				1B625BB526353950009D7C10 /* MostPopularDataService.swift in Sources */,
 				1B748E0426399D490024CCD1 /* TopStoriesDataServiceTests.swift in Sources */,
 				1B748E0826399D570024CCD1 /* Section.swift in Sources */,
+				1B748E0D263A93C20024CCD1 /* TopStoriesViewModel.swift in Sources */,
 				1B57037D2639446000BCB707 /* MostPopularArticle.swift in Sources */,
 				1B625BC52635398F009D7C10 /* LoadingState.swift in Sources */,
 				1B57037F2639446400BCB707 /* MediaMetadata.swift in Sources */,
@@ -498,6 +512,7 @@
 				1B625BE92636BE91009D7C10 /* MediaView.swift in Sources */,
 				1B85229C2632A9EF0082E7C1 /* MostPopularData.swift in Sources */,
 				1B570379263943EB00BCB707 /* MostPopularArticleType.swift in Sources */,
+				1B748E0B263A93C20024CCD1 /* TopStoriesViewModel.swift in Sources */,
 				1B625BDA2636BBBB009D7C10 /* Media.swift in Sources */,
 				1B8522992632A90F0082E7C1 /* MostPopularDataService.swift in Sources */,
 				1B8522832631AD3E0082E7C1 /* MostPopularView.swift in Sources */,
@@ -536,6 +551,7 @@
 				1B8522EA26352F820082E7C1 /* NetworkError.swift in Sources */,
 				1B8522D626352A630082E7C1 /* Period.swift in Sources */,
 				1B5703802639446600BCB707 /* Media.swift in Sources */,
+				1B748E0C263A93C20024CCD1 /* TopStoriesViewModel.swift in Sources */,
 				1B748E0626399D530024CCD1 /* TopStoriesDataService.swift in Sources */,
 				1B57037C2639446000BCB707 /* MostPopularArticle.swift in Sources */,
 				1B8522E426352EEB0082E7C1 /* MostPopularViewModel.swift in Sources */,
