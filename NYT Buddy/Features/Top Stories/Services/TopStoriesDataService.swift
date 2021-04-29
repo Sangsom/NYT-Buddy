@@ -21,11 +21,7 @@ class TopStoriesDataService {
                 return completion(.failure(.noData))
             }
 
-            print("Data", data)
-
             let response = try? JSONDecoder().decode(StoryData.self, from: data)
-
-            print("Response", response)
 
             if let response = response {
                 completion(.success(response.results))
