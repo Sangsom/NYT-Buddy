@@ -40,9 +40,11 @@ struct StoriesScrollView: View {
 
             HStack {
                 Spacer()
-                Button(action: {}, label: {
-                    Text("Show all")
-                })
+                NavigationLink(
+                    destination: ShowAllStoriesView(stories: stories),
+                    label: {
+                        Text("Show all")
+                    })
             }
         }
         .padding(.horizontal)
