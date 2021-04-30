@@ -11,7 +11,28 @@ struct MultimediaView: View {
     var multimedia: [Multimedia]
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        if let mediaItem = multimedia.first {
+            GeometryReader { geo in
+                VStack(alignment: .leading, content: {
+                    Divider()
+
+                    ScrollView(.vertical, showsIndicators: false, content: {
+                        VStack {
+                            Text(mediaItem.caption)
+                            RemoteImage(url: mediaItem.url.absoluteString, size: geo.size)
+                            HStack {
+                                Spacer()
+                                Text(mediaItem.copyright)
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                        .multilineTextAlignment(.center)
+                    })
+                })
+            }
+        } else {
+            EmptyView()
+        }
     }
 }
 
