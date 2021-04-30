@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Section: String {
+enum Section: String, CaseIterable, Identifiable {
     case arts
     case automobiles
     case books
@@ -34,4 +34,6 @@ enum Section: String {
     case upshot
     case us
     case world
+
+    var id: String { self.rawValue }
 }
