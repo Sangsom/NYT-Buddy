@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ArticleView: View {
+struct ArticleDetailsView: View {
     @Environment(\.openURL) var openURL
 
     var article: MostPopularArticle
@@ -68,7 +68,7 @@ struct ArticleView: View {
 struct ArticleView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ArticleView(article: MostPopularArticle.exampleData.first!)
+            ArticleDetailsView(article: MostPopularArticle.exampleData.first!)
                 .navigationBarTitleDisplayMode(.inline)
         }
     }
