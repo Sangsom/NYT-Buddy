@@ -11,12 +11,8 @@ struct TopStoriesView: View {
     @EnvironmentObject var topStoriesViewModel: TopStoriesViewModel
 
     var body: some View {
-        VStack {
-            List(topStoriesViewModel.stories, id: \.self) { story in
-                Text(story.title)
-            }
-        }
-        .onAppear(perform: loadData)
+        StoriesScrollView(stories: $topStoriesViewModel.stories)
+            .onAppear(perform: loadData)
     }
 
     // MARK: - Custom methods
@@ -28,5 +24,6 @@ struct TopStoriesView: View {
 struct TopStoriesView_Previews: PreviewProvider {
     static var previews: some View {
         TopStoriesView()
+            .environmentObject(TopStoriesViewModel())
     }
 }

@@ -71,6 +71,7 @@ struct MostPopularView: View {
             })
     }
 
+    // MARK: - Custom methods
     private func loadData() {
         mostPopularViewModel.fetchMostPopularArticles()
     }

@@ -50,6 +50,9 @@
 		1B748E18263ACEED0024CCD1 /* Multimedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B748E17263ACEED0024CCD1 /* Multimedia.swift */; };
 		1B748E19263ACEED0024CCD1 /* Multimedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B748E17263ACEED0024CCD1 /* Multimedia.swift */; };
 		1B748E1A263ACEED0024CCD1 /* Multimedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B748E17263ACEED0024CCD1 /* Multimedia.swift */; };
+		1B748E1C263AE16F0024CCD1 /* StoriesScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B748E1B263AE16F0024CCD1 /* StoriesScrollView.swift */; };
+		1B748E1D263AE16F0024CCD1 /* StoriesScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B748E1B263AE16F0024CCD1 /* StoriesScrollView.swift */; };
+		1B748E1E263AE16F0024CCD1 /* StoriesScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B748E1B263AE16F0024CCD1 /* StoriesScrollView.swift */; };
 		1B8522812631AD3E0082E7C1 /* NYT_BuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522802631AD3E0082E7C1 /* NYT_BuddyApp.swift */; };
 		1B8522832631AD3E0082E7C1 /* MostPopularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522822631AD3E0082E7C1 /* MostPopularView.swift */; };
 		1B8522852631AD3F0082E7C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B8522842631AD3F0082E7C1 /* Assets.xcassets */; };
@@ -112,6 +115,7 @@
 		1B748E0F263ACBA00024CCD1 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		1B748E13263ACEDB0024CCD1 /* StoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryData.swift; sourceTree = "<group>"; };
 		1B748E17263ACEED0024CCD1 /* Multimedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multimedia.swift; sourceTree = "<group>"; };
+		1B748E1B263AE16F0024CCD1 /* StoriesScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesScrollView.swift; sourceTree = "<group>"; };
 		1B85227D2631AD3E0082E7C1 /* NYT Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYT Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8522802631AD3E0082E7C1 /* NYT_BuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYT_BuddyApp.swift; sourceTree = "<group>"; };
 		1B8522822631AD3E0082E7C1 /* MostPopularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularView.swift; sourceTree = "<group>"; };
@@ -201,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				1B748DFA263991D70024CCD1 /* TopStoriesView.swift */,
+				1B748E1B263AE16F0024CCD1 /* StoriesScrollView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -512,6 +517,7 @@
 				1B5703812639446700BCB707 /* Media.swift in Sources */,
 				1B625BB526353950009D7C10 /* MostPopularDataService.swift in Sources */,
 				1B748E0426399D490024CCD1 /* TopStoriesDataServiceTests.swift in Sources */,
+				1B748E1E263AE16F0024CCD1 /* StoriesScrollView.swift in Sources */,
 				1B748E0826399D570024CCD1 /* Section.swift in Sources */,
 				1B748E0D263A93C20024CCD1 /* TopStoriesViewModel.swift in Sources */,
 				1B57037D2639446000BCB707 /* MostPopularArticle.swift in Sources */,
@@ -535,6 +541,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B8522BE2633C77B0082E7C1 /* LoadingState.swift in Sources */,
+				1B748E1C263AE16F0024CCD1 /* StoriesScrollView.swift in Sources */,
 				1B625BE92636BE91009D7C10 /* MediaView.swift in Sources */,
 				1B85229C2632A9EF0082E7C1 /* MostPopularData.swift in Sources */,
 				1B570379263943EB00BCB707 /* MostPopularArticleType.swift in Sources */,
@@ -577,6 +584,7 @@
 				1B57037A2639445200BCB707 /* MostPopularArticleType.swift in Sources */,
 				1B8522ED26352F850082E7C1 /* LoadingState.swift in Sources */,
 				1B8522E126352EE50082E7C1 /* MostPopularViewModelTests.swift in Sources */,
+				1B748E1D263AE16F0024CCD1 /* StoriesScrollView.swift in Sources */,
 				1B8522E726352F6D0082E7C1 /* MostPopularDataService.swift in Sources */,
 				1B57037E2639446400BCB707 /* MediaMetadata.swift in Sources */,
 				1B8522EA26352F820082E7C1 /* NetworkError.swift in Sources */,
