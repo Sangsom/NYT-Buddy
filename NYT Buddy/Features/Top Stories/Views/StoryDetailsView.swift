@@ -52,7 +52,9 @@ struct StoryDetailsView: View {
                 }
             }
 
-//            MediaView(media: story.multimedia)
+            if let multimedia = story.multimedia {
+                MultimediaView(multimedia: multimedia)
+            }
 
             Spacer()
         }
