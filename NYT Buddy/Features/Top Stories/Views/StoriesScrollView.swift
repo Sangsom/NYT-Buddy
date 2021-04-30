@@ -28,6 +28,7 @@ struct StoriesScrollView: View {
                                         RemoteImage(url: firstItem.url.absoluteString, size: CGSize(width: 150, height: 150))
                                     }
                                     Text(story.title)
+                                        .foregroundColor(.primary)
 
                                     Spacer()
                                 }
