@@ -25,13 +25,13 @@ struct StoryDetailsView: View {
                 if let subsection = story.subsection,
                    !subsection.isEmpty {
                     Image(systemName: "arrow.right")
-                    Text(subsection)
+                    Text(subsection.capitalized)
                         .bold()
                         .underline(true, color: .red)
                 }
 
                 Spacer()
-                Text(story.published)
+                Text(story.publishedFormatted)
             }
             .padding(.top)
             .foregroundColor(Color("AccentColor"))

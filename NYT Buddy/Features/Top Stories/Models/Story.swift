@@ -17,6 +17,19 @@ struct Story: Codable, Hashable {
     var published: String
     var multimedia: [Multimedia]?
 
+    var publishedFormatted: String {
+        let isoDateFormatter = ISO8601DateFormatter()
+        if let date = isoDateFormatter.date(from: published) {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .short
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+
+            return dateFormatter.string(from: date)
+        } else {
+            return "N/A"
+        }
+    }
+
     enum CodingKeys: String, CodingKey {
         case section
         case subsection
