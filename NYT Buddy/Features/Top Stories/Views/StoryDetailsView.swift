@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct StoryDetailsView: View {
+
+    // MARK: - Properties
+    @Environment(\.openURL) var openURL
+
+    var story: Story
+
+    // MARK: - Body
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Hello, World!")
     }
+
+    // MARK: - Custom methods
 }
 
+// MARK: - Preview
 struct StoryDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        StoryDetailsView()
+        StoryDetailsView(story: Story.exampleData)
     }
 }

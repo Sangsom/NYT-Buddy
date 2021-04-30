@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct ArticleDetailsView: View {
+
+    // MARK: - Properties
     @Environment(\.openURL) var openURL
 
     var article: MostPopularArticle
 
+    // MARK: - Body
     var body: some View {
         VStack(alignment: .leading, spacing: 10.0) {
             HStack(alignment: .center) {
@@ -59,12 +62,14 @@ struct ArticleDetailsView: View {
         .padding(.horizontal)
     }
 
+    // MARK: - Custom methods
     func openFullArticle() {
         guard let url = article.url else { return }
         openURL(url)
     }
 }
 
+// MARK: - Preview
 struct ArticleView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
