@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ShowAllStoriesView: View {
-    var stories: [Story]
+    var storyData: StoryData
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20, content: {
-            List(stories, id: \.self) { story in
+            List(storyData.results) { story in
                 NavigationLink(
                     destination: StoryDetailsView(story: story),
                     label: {
@@ -21,14 +21,14 @@ struct ShowAllStoriesView: View {
             }
             .listStyle(InsetGroupedListStyle())
         })
-        .navigationBarTitle("Arts", displayMode: .inline)
+        .navigationBarTitle(storyData.section, displayMode: .inline)
     }
 }
 
 struct ShowAllStoriesView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ShowAllStoriesView(stories: Array(repeating: Story.exampleData, count: 15))
+            ShowAllStoriesView(storyData: StoryData.exampleData)
         }
     }
 }

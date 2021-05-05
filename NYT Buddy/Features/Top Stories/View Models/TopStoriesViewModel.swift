@@ -7,9 +7,6 @@
 
 import Foundation
 
-// TODO: How to store stories for every category???
-// TODO: Why on appear is calling twice?
-
 class TopStoriesViewModel: ObservableObject {
     // MARK: - Properties
     var topStoriesDataService: TopStoriesDataService?

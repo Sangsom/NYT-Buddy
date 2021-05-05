@@ -13,30 +13,32 @@ struct StoriesScrollView: View {
     var section: Section
     
     var body: some View {
-        VStack(alignment: .leading) {
+        let stories = topStoriesViewModel.storyData.filter({ $0.section.lowercased() == section.rawValue })
+
+        return VStack(alignment: .leading) {
             Text(section.rawValue)
                 .font(.headline)
                 .textCase(.uppercase)
 
             ScrollView(.horizontal, showsIndicators: true, content: {
                 HStack(alignment: .top, spacing: 20.0) {
-                    ForEach(topStoriesViewModel
-                                .storyData
-                                .filter({ $0.section.lowercased() == section.rawValue }))
+                    ForEach(stories)
                     { storyData in
                         StoriesScrollViewItem(storyData: storyData)
                     }
                 }
             })
 
-//            HStack {
-//                Spacer()
-//                NavigationLink(
-//                    destination: ShowAllStoriesView(stories: stories),
-//                    label: {
-//                        Text("Show all")
-//                    })
-//            }
+            if let storyData = stories.first {
+                HStack {
+                    Spacer()
+                    NavigationLink(
+                        destination: ShowAllStoriesView(storyData: storyData),
+                        label: {
+                            Text("Show all")
+                        })
+                }
+            }
         }
         .onAppear(perform: loadData)
         .padding(.horizontal)
