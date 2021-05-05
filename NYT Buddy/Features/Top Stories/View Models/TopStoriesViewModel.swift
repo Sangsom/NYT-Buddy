@@ -8,6 +8,7 @@
 import Foundation
 
 // TODO: How to store stories for every category???
+// TODO: Why on appear is calling twice?
 
 class TopStoriesViewModel: ObservableObject {
     // MARK: - Properties
@@ -26,7 +27,12 @@ class TopStoriesViewModel: ObservableObject {
             switch result {
             case .success(let stories):
                 DispatchQueue.main.async {
-                    self.storyData.append(stories)
+                    if let index = self.storyData.firstIndex(where: { $0.section == stories.section }) {
+                        self.storyData.remove(at: index)
+                        self.storyData.append(stories)
+                    } else {
+                        self.storyData.append(stories)
+                    }
                 }
             case .failure(let error):
                 print("Failed to fetch stories data: \(error.localizedDescription)")
