@@ -55,7 +55,7 @@ struct StoriesScrollView: View {
 
     // MARK: - Custom methods
     private func loadData() {
-        topStoriesViewModel.fetchTopStories()
+        topStoriesViewModel.fetchTopStories(for: section)
     }
 }
 

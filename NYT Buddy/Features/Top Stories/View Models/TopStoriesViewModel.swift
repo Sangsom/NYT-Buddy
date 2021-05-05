@@ -19,8 +19,8 @@ class TopStoriesViewModel: ObservableObject {
     }
 
     // MARK: - Custom methods
-    func fetchTopStories() {
-        topStoriesDataService?.fetchTopStories(for: .arts, completion: { result in
+    func fetchTopStories(for section: Section) {
+        topStoriesDataService?.fetchTopStories(for: section, completion: { result in
             switch result {
             case .success(let stories):
                 DispatchQueue.main.async {
