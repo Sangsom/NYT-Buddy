@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Story: Codable, Hashable {
+struct Story: Codable, Hashable, Identifiable {
     var section: String
     var subsection: String?
     var title: String
@@ -16,6 +16,7 @@ struct Story: Codable, Hashable {
     var byline: String
     var published: String
     var multimedia: [Multimedia]?
+    var id: String { title }
 
     var publishedFormatted: String {
         let isoDateFormatter = ISO8601DateFormatter()
