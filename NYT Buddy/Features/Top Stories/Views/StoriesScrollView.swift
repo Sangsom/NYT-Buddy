@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct StoriesScrollView: View {
-    @Binding var stories: [Story]
+    @EnvironmentObject var topStoriesViewModel: TopStoriesViewModel
 
+    var section: Section
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Arts")
+            Text(section.rawValue)
                 .font(.headline)
                 .textCase(.uppercase)
 
             ScrollView(.horizontal, showsIndicators: true, content: {
                 HStack(alignment: .top, spacing: 20.0) {
-                    ForEach(stories.prefix(5), id: \.self) { story in
+                    ForEach(topStoriesViewModel.stories.prefix(5), id: \.self) { story in
                         NavigationLink(
                             destination: StoryDetailsView(story: story),
                             label: {
@@ -38,22 +40,29 @@ struct StoriesScrollView: View {
                 }
             })
 
-            HStack {
-                Spacer()
-                NavigationLink(
-                    destination: ShowAllStoriesView(stories: stories),
-                    label: {
-                        Text("Show all")
-                    })
-            }
+//            HStack {
+//                Spacer()
+//                NavigationLink(
+//                    destination: ShowAllStoriesView(stories: stories),
+//                    label: {
+//                        Text("Show all")
+//                    })
+//            }
         }
+        .onAppear(perform: loadData)
         .padding(.horizontal)
+    }
+
+    // MARK: - Custom methods
+    private func loadData() {
+        topStoriesViewModel.fetchTopStories()
     }
 }
 
 struct StoriesScrollView_Previews: PreviewProvider {
     static var previews: some View {
-        StoriesScrollView(stories: .constant(StoryData.exampleData.results))
+        StoriesScrollView(section: .arts)
+            .environmentObject(TopStoriesViewModel())
             .previewLayout(.sizeThatFits)
     }
 }
