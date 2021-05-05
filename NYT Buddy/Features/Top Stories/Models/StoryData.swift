@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct StoryData: Codable {
+struct StoryData: Codable, Hashable, Identifiable {
     let status: String
     let section: String
     let results: [Story]
+    var id: String { section }
 }
 
 #if DEBUG
