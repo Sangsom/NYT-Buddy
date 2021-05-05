@@ -208,6 +208,14 @@
 			path = TopStoriesView;
 			sourceTree = "<group>";
 		};
+		1B3F01732642CFB200665327 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B8522B42633C1DB0082E7C1 /* LoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		1B625BA426353925009D7C10 /* Asynchronous NYT BuddyTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,7 +347,6 @@
 			isa = PBXGroup;
 			children = (
 				1B8522A22632C3040082E7C1 /* Most Popular */,
-				1B8522B42633C1DB0082E7C1 /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -390,6 +397,7 @@
 			children = (
 				1B8522AD2633BD0B0082E7C1 /* Constants */,
 				1B8522A92632F4B50082E7C1 /* Enums */,
+				1B3F01732642CFB200665327 /* Views */,
 			);
 			path = Common;
 			sourceTree = "<group>";
