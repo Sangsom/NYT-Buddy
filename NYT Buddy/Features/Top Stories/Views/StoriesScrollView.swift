@@ -20,22 +20,24 @@ struct StoriesScrollView: View {
 
             ScrollView(.horizontal, showsIndicators: true, content: {
                 HStack(alignment: .top, spacing: 20.0) {
-                    ForEach(topStoriesViewModel.stories.prefix(5), id: \.self) { story in
-                        NavigationLink(
-                            destination: StoryDetailsView(story: story),
-                            label: {
-                                VStack(spacing: 8) {
-                                    if let multimedia = story.multimedia,
-                                       let firstItem = multimedia.first {
-                                        RemoteImage(url: firstItem.url.absoluteString, size: CGSize(width: 150, height: 150))
-                                    }
-                                    Text(story.title)
-                                        .foregroundColor(.primary)
+                    ForEach(topStoriesViewModel.storyData.filter({ $0.section.lowercased() == section.rawValue })) { storyData in
+                        ForEach(storyData.results.prefix(5)) { story in
+                            NavigationLink(
+                                destination: StoryDetailsView(story: story),
+                                label: {
+                                    VStack(spacing: 8) {
+                                        if let multimedia = story.multimedia,
+                                           let firstItem = multimedia.first {
+                                            RemoteImage(url: firstItem.url.absoluteString, size: CGSize(width: 150, height: 150))
+                                        }
+                                        Text(story.title)
+                                            .foregroundColor(.primary)
 
-                                    Spacer()
-                                }
-                                .frame(width: 150, height: 250)
-                            })
+                                        Spacer()
+                                    }
+                                    .frame(width: 150, height: 250)
+                                })
+                        }
                     }
                 }
             })

@@ -9,7 +9,11 @@ import SwiftUI
 
 struct TopStoriesView: View {
     var body: some View {
-        StoriesScrollView(section: .books)
+        VStack {
+            StoriesScrollView(section: .books)
+            StoriesScrollView(section: .food)
+            StoriesScrollView(section: .arts)
+        }
     }
 }
 

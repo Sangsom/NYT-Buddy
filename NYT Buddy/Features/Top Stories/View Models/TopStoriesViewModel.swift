@@ -7,11 +7,15 @@
 
 import Foundation
 
+// TODO: How to store stories for every category???
+
 class TopStoriesViewModel: ObservableObject {
     // MARK: - Properties
     var topStoriesDataService: TopStoriesDataService?
 
     @Published var stories = [Story]()
+
+    @Published var storyData = [StoryData]()
 
     // MARK: - Init
     init() {
@@ -24,7 +28,8 @@ class TopStoriesViewModel: ObservableObject {
             switch result {
             case .success(let stories):
                 DispatchQueue.main.async {
-                    self.stories = stories
+//                    self.stories = stories
+                    self.storyData.append(stories)
                 }
             case .failure(let error):
                 print("Failed to fetch stories data: \(error.localizedDescription)")
