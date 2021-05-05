@@ -11,9 +11,9 @@ struct TopStoriesView: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack {
-                StoriesScrollView(section: .books)
-                StoriesScrollView(section: .food)
-                StoriesScrollView(section: .arts)
+                ForEach(Section.allCases.prefix(5)) { section in
+                    StoriesScrollView(section: section)
+                }
             }
         }
         .navigationBarTitle("Top Stories")

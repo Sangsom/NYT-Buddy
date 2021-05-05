@@ -8,7 +8,11 @@
 import Foundation
 
 class TopStoriesDataService {
-    func fetchTopStories(for section: Section, completion: @escaping (Result<StoryData, NetworkError>) -> Void) {
+    typealias completionHandler = (Result<StoryData, NetworkError>) -> Void
+
+    var tasks = [URL: [completionHandler]]()
+
+    func fetchTopStories(for section: Section, completion: @escaping completionHandler) {
 
         guard let url = createURL(for: section)  else {
             return completion(.failure(.badURL))
@@ -16,19 +20,28 @@ class TopStoriesDataService {
 
         let request = URLRequest(url: url)
 
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else {
-                return completion(.failure(.noData))
-            }
+        if tasks.keys.contains(url) {
+            tasks[url]?.append(completion)
+        } else {
+            tasks[url] = [completion]
 
-            let response = try? JSONDecoder().decode(StoryData.self, from: data)
+            URLSession.shared.dataTask(with: request) { data, response, error in
+                DispatchQueue.main.async {
+                    guard let data = data, error == nil else {
+                        return completion(.failure(.noData))
+                    }
 
-            if let response = response {
-                completion(.success(response))
-            } else {
-                completion(.failure(.decodingError))
-            }
-        }.resume()
+                    let response = try? JSONDecoder().decode(StoryData.self, from: data)
+
+                    if let response = response {
+                        completion(.success(response))
+                    } else {
+                        completion(.failure(.decodingError))
+                    }
+                }
+
+            }.resume()
+        }
     }
 
     func createURL(for section: Section) -> URL? {
