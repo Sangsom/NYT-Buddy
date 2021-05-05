@@ -9,11 +9,14 @@ import SwiftUI
 
 struct TopStoriesView: View {
     var body: some View {
-        VStack {
-            StoriesScrollView(section: .books)
-            StoriesScrollView(section: .food)
-            StoriesScrollView(section: .arts)
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack {
+                StoriesScrollView(section: .books)
+                StoriesScrollView(section: .food)
+                StoriesScrollView(section: .arts)
+            }
         }
+        .navigationBarTitle("Top Stories")
     }
 }
 
