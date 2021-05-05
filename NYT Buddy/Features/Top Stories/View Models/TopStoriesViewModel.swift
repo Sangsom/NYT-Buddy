@@ -13,8 +13,6 @@ class TopStoriesViewModel: ObservableObject {
     // MARK: - Properties
     var topStoriesDataService: TopStoriesDataService?
 
-    @Published var stories = [Story]()
-
     @Published var storyData = [StoryData]()
 
     // MARK: - Init
@@ -28,7 +26,6 @@ class TopStoriesViewModel: ObservableObject {
             switch result {
             case .success(let stories):
                 DispatchQueue.main.async {
-//                    self.stories = stories
                     self.storyData.append(stories)
                 }
             case .failure(let error):
