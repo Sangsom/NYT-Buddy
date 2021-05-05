@@ -18,6 +18,7 @@ struct StoriesScrollView: View {
         return VStack(alignment: .leading) {
             Text(section.rawValue)
                 .font(.headline)
+                .foregroundColor(.secondary)
                 .textCase(.uppercase)
 
             ScrollView(.horizontal, showsIndicators: true, content: {
