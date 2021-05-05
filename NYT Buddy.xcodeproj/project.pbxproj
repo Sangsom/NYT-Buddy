@@ -212,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				1B8522B42633C1DB0082E7C1 /* LoadingView.swift */,
+				1B625BE32636BD83009D7C10 /* RemoteImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -355,7 +356,6 @@
 			isa = PBXGroup;
 			children = (
 				1B8522982632A90F0082E7C1 /* MostPopularDataService.swift */,
-				1B625BE32636BD83009D7C10 /* RemoteImage.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
