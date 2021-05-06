@@ -19,3 +19,14 @@ Getting most popular articles from `NYTimes.com` based on emails, shares, or vie
 - Open full article in browser.
 
 ![Most Popular Articles](https://media.giphy.com/media/CIJsl0UNeMSjnOSyOK/giphy.gif)
+
+### Top Stories
+
+Get Top Stories of different sections (arts, business, ...)
+
+- List of top stories by section (Showing in horizontal scroll view by 5).
+- Open story for full details.
+- Open full story in browser.
+- Show all stories of particular section.
+
+![Top Stories](https://media.giphy.com/media/KKnlKVB6aUyGhtjJnv/giphy.gif)
