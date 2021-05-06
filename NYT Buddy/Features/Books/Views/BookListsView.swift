@@ -13,8 +13,15 @@ struct BookListsView: View {
 
     // MARK: - Body
     var body: some View {
-        List(booksViewModel.booksList) { item in
-            Text(item.displayName)
+        ZStack {
+            List(booksViewModel.booksList) { item in
+                Text(item.displayName)
+            }
+            .blur(radius: booksViewModel.state == .loading ? 4 : 0)
+
+            if booksViewModel.state == .loading {
+                LoadingView()
+            }
         }
         .onAppear(perform: loadData)
         .navigationTitle("Best Sellers List")
