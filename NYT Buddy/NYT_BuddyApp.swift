@@ -11,6 +11,7 @@ import SwiftUI
 struct NYT_BuddyApp: App {
     @StateObject var mostPopularViewModel = MostPopularViewModel()
     @StateObject var topStoriesViewModel = TopStoriesViewModel()
+    @StateObject var booksViewModel = BooksViewModel()
 
     @State private var selectedTab = 0
 
@@ -36,6 +37,16 @@ struct NYT_BuddyApp: App {
                         .tabItem {
                             Image(systemName: "scroll")
                             Text("Top Stories")
+                        }
+
+                        NavigationView {
+                            BookListsView()
+                                .environmentObject(booksViewModel)
+                        }
+                        .tag(2)
+                        .tabItem {
+                            Image(systemName: "book")
+                            Text("Books")
                         }
                     }
             )
