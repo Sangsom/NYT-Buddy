@@ -4,6 +4,8 @@ This is a NYT Buddy App created for learning purposes by using `The New York Tim
 
 Link to API: [NYT APIs](https://developer.nytimes.com).
 
+---
+
 ## Features
 
 Currently implemented App Features.
@@ -19,6 +21,8 @@ Getting most popular articles from `NYTimes.com` based on emails, shares, or vie
 - Open full article in browser.
 
 ![Most Popular Articles](https://media.giphy.com/media/CIJsl0UNeMSjnOSyOK/giphy.gif)
+
+---
 
 ### Top Stories
 
