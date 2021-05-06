@@ -7,8 +7,8 @@
 
 import Foundation
 
-enum BookUpdate {
-    case weekly, monthly
+enum BookUpdate: String, Codable {
+    case WEEKLY, MONTHLY
 }
 
 struct BookList: Codable {
@@ -17,6 +17,7 @@ struct BookList: Codable {
     var listNameEncoded: String
     var oldestPublishedDate: String
     var newestPublishedDate: String
+    var updated: BookUpdate
 
     enum CodingKeys: String, CodingKey {
         case listName = "list_name"
@@ -24,6 +25,7 @@ struct BookList: Codable {
         case listNameEncoded = "list_name_encoded"
         case oldestPublishedDate = "oldest_published_date"
         case newestPublishedDate = "newest_published_date"
+        case updated
     }
 }
 
@@ -34,6 +36,7 @@ extension BookList {
         displayName: "Combined Print & E-Book Fiction",
         listNameEncoded: "combined-print-and-e-book-fiction",
         oldestPublishedDate: "2011-02-13",
-        newestPublishedDate: "2021-05-16")
+        newestPublishedDate: "2021-05-16",
+        updated: .WEEKLY)
 }
 #endif
