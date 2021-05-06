@@ -30,8 +30,6 @@ class BooksViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     self.booksList = bookListNames
                     self.state = .success
-
-                    print(bookListNames)
                 }
             case .failure(let error):
                 print("Failed to fetch currency data: \(error.localizedDescription)")

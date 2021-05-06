@@ -13,8 +13,11 @@ struct BookListsView: View {
 
     // MARK: - Body
     var body: some View {
-        Text("Hello, World!")
-            .onAppear(perform: loadData)
+        List(booksViewModel.booksList) { item in
+            Text(item.displayName)
+        }
+        .onAppear(perform: loadData)
+        .navigationTitle("Best Sellers List")
     }
 
     // MARK: - Custom methods
@@ -25,7 +28,9 @@ struct BookListsView: View {
 
 struct BookListsView_Previews: PreviewProvider {
     static var previews: some View {
-        BookListsView()
-            .environmentObject(BooksViewModel())
+        NavigationView {
+            BookListsView()
+                .environmentObject(BooksViewModel())
+        }
     }
 }

@@ -7,13 +7,15 @@
 
 import Foundation
 
-struct BookList: Codable {
+struct BookList: Codable, Identifiable {
     var listName: String
     var displayName: String
     var listNameEncoded: String
     var oldestPublishedDate: String
     var newestPublishedDate: String
     var updated: BookUpdate
+
+    var id: String { listNameEncoded }
 
     enum CodingKeys: String, CodingKey {
         case listName = "list_name"

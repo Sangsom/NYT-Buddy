@@ -23,7 +23,7 @@ struct NYT_BuddyApp: App {
                             MostPopularView()
                                 .environmentObject(mostPopularViewModel)
                         }
-                        .tag(0)
+                        .tag(2)
                         .tabItem {
                             Image(systemName: "newspaper")
                             Text("Popular Articles")
@@ -43,7 +43,7 @@ struct NYT_BuddyApp: App {
                             BookListsView()
                                 .environmentObject(booksViewModel)
                         }
-                        .tag(2)
+                        .tag(0)
                         .tabItem {
                             Image(systemName: "book")
                             Text("Books")
