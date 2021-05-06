@@ -9,5 +9,5 @@ import Foundation
 
 struct BooksData: Codable {
     let status: String
-    let result: [BookList]
+    let results: [BookList]
 }
