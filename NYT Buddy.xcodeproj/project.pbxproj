@@ -18,6 +18,9 @@
 		1B0434AD26441A4700DE8556 /* BookListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434AC26441A4700DE8556 /* BookListsView.swift */; };
 		1B0434AE26441A4700DE8556 /* BookListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434AC26441A4700DE8556 /* BookListsView.swift */; };
 		1B0434AF26441A4700DE8556 /* BookListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434AC26441A4700DE8556 /* BookListsView.swift */; };
+		1B0434B1264420BD00DE8556 /* BookUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434B0264420BD00DE8556 /* BookUpdate.swift */; };
+		1B0434B2264420BD00DE8556 /* BookUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434B0264420BD00DE8556 /* BookUpdate.swift */; };
+		1B0434B3264420BD00DE8556 /* BookUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434B0264420BD00DE8556 /* BookUpdate.swift */; };
 		1B3F016F2642B7E100665327 /* StoriesScrollViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F016E2642B7E100665327 /* StoriesScrollViewItem.swift */; };
 		1B570377263943AD00BCB707 /* MostPopularArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B570376263943AC00BCB707 /* MostPopularArticle.swift */; };
 		1B570379263943EB00BCB707 /* MostPopularArticleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B570378263943EB00BCB707 /* MostPopularArticleType.swift */; };
@@ -117,6 +120,7 @@
 		1B0434A226440CFA00DE8556 /* BooksDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksDataService.swift; sourceTree = "<group>"; };
 		1B0434A72644153C00DE8556 /* BooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
 		1B0434AC26441A4700DE8556 /* BookListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListsView.swift; sourceTree = "<group>"; };
+		1B0434B0264420BD00DE8556 /* BookUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookUpdate.swift; sourceTree = "<group>"; };
 		1B3F016E2642B7E100665327 /* StoriesScrollViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesScrollViewItem.swift; sourceTree = "<group>"; };
 		1B570376263943AC00BCB707 /* MostPopularArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticle.swift; sourceTree = "<group>"; };
 		1B570378263943EB00BCB707 /* MostPopularArticleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticleType.swift; sourceTree = "<group>"; };
@@ -471,6 +475,7 @@
 				1B8522BD2633C77B0082E7C1 /* LoadingState.swift */,
 				1B570378263943EB00BCB707 /* MostPopularArticleType.swift */,
 				1B748DFD263995A50024CCD1 /* Section.swift */,
+				1B0434B0264420BD00DE8556 /* BookUpdate.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -633,6 +638,7 @@
 				1B5703812639446700BCB707 /* Media.swift in Sources */,
 				1B625BB526353950009D7C10 /* MostPopularDataService.swift in Sources */,
 				1B748E0426399D490024CCD1 /* TopStoriesDataServiceTests.swift in Sources */,
+				1B0434B3264420BD00DE8556 /* BookUpdate.swift in Sources */,
 				1B748E1E263AE16F0024CCD1 /* StoriesScrollView.swift in Sources */,
 				1B748E0826399D570024CCD1 /* Section.swift in Sources */,
 				1B748E0D263A93C20024CCD1 /* TopStoriesViewModel.swift in Sources */,
@@ -693,6 +699,7 @@
 				1B6FB253263C330C00A86CCD /* StoryListItem.swift in Sources */,
 				1B748DFB263991D70024CCD1 /* TopStoriesView.swift in Sources */,
 				1B625BD526369B0B009D7C10 /* ArticleDetailsView.swift in Sources */,
+				1B0434B1264420BD00DE8556 /* BookUpdate.swift in Sources */,
 				1B748E18263ACEED0024CCD1 /* Multimedia.swift in Sources */,
 				1B0434A02644096100DE8556 /* BookList.swift in Sources */,
 				1B625BDF2636BC88009D7C10 /* MediaMetadata.swift in Sources */,
@@ -705,6 +712,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B748E0726399D570024CCD1 /* Section.swift in Sources */,
+				1B0434B2264420BD00DE8556 /* BookUpdate.swift in Sources */,
 				1B8522F026352F940082E7C1 /* MostPopularData.swift in Sources */,
 				1B8522F326352FAA0082E7C1 /* AppConstants.swift in Sources */,
 				1B748E19263ACEED0024CCD1 /* Multimedia.swift in Sources */,

@@ -7,10 +7,6 @@
 
 import Foundation
 
-enum BookUpdate: String, Codable {
-    case WEEKLY, MONTHLY
-}
-
 struct BookList: Codable {
     var listName: String
     var displayName: String
