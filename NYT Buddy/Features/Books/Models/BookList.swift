@@ -26,3 +26,14 @@ struct BookList: Codable {
         case newestPublishedDate = "newest_published_date"
     }
 }
+
+#if DEBUG
+extension BookList {
+    static let exampleData = BookList(
+        listName: "Combined Print and E-Book Fiction",
+        displayName: "Combined Print & E-Book Fiction",
+        listNameEncoded: "combined-print-and-e-book-fiction",
+        oldestPublishedDate: "2011-02-13",
+        newestPublishedDate: "2021-05-16")
+}
+#endif
