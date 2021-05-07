@@ -14,10 +14,8 @@ struct BookOverviewView: View {
     // MARK: - Body
     var body: some View {
         ZStack {
-            List(booksViewModel.booksList) { item in
-                Text(item.name)
-            }
-            .blur(radius: booksViewModel.state == .loading ? 4 : 0)
+            BookListsView(lists: booksViewModel.booksList)
+                .blur(radius: booksViewModel.state == .loading ? 4 : 0)
 
             if booksViewModel.state == .loading {
                 LoadingView()
@@ -33,7 +31,7 @@ struct BookOverviewView: View {
     }
 }
 
-struct BookListsView_Previews: PreviewProvider {
+struct BookOverviewView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             BookOverviewView()
