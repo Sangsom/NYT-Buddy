@@ -40,7 +40,7 @@ struct NYT_BuddyApp: App {
                         }
 
                         NavigationView {
-                            BookListsView()
+                            BookOverviewView()
                                 .environmentObject(booksViewModel)
                         }
                         .tag(0)

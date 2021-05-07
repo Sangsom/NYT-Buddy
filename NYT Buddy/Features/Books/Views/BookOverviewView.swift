@@ -1,5 +1,5 @@
 //
-//  BookListsView.swift
+//  BookOverviewView.swift
 //  NYT Buddy
 //
 //  Created by Rinalds Domanovs on 06/05/2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BookListsView: View {
+struct BookOverviewView: View {
     // MARK: - Properties
     @EnvironmentObject var booksViewModel: BooksViewModel
 
@@ -36,7 +36,7 @@ struct BookListsView: View {
 struct BookListsView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            BookListsView()
+            BookOverviewView()
                 .environmentObject(BooksViewModel())
         }
     }

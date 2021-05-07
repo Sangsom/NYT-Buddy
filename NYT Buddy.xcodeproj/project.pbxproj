@@ -15,9 +15,9 @@
 		1B0434A82644153C00DE8556 /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434A72644153C00DE8556 /* BooksViewModel.swift */; };
 		1B0434A92644153C00DE8556 /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434A72644153C00DE8556 /* BooksViewModel.swift */; };
 		1B0434AA2644153C00DE8556 /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434A72644153C00DE8556 /* BooksViewModel.swift */; };
-		1B0434AD26441A4700DE8556 /* BookListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434AC26441A4700DE8556 /* BookListsView.swift */; };
-		1B0434AE26441A4700DE8556 /* BookListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434AC26441A4700DE8556 /* BookListsView.swift */; };
-		1B0434AF26441A4700DE8556 /* BookListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434AC26441A4700DE8556 /* BookListsView.swift */; };
+		1B0434AD26441A4700DE8556 /* BookOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434AC26441A4700DE8556 /* BookOverviewView.swift */; };
+		1B0434AE26441A4700DE8556 /* BookOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434AC26441A4700DE8556 /* BookOverviewView.swift */; };
+		1B0434AF26441A4700DE8556 /* BookOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434AC26441A4700DE8556 /* BookOverviewView.swift */; };
 		1B0434B1264420BD00DE8556 /* BookUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434B0264420BD00DE8556 /* BookUpdate.swift */; };
 		1B0434B2264420BD00DE8556 /* BookUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434B0264420BD00DE8556 /* BookUpdate.swift */; };
 		1B0434B3264420BD00DE8556 /* BookUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434B0264420BD00DE8556 /* BookUpdate.swift */; };
@@ -119,7 +119,7 @@
 		1B04349F2644096100DE8556 /* BookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookList.swift; sourceTree = "<group>"; };
 		1B0434A226440CFA00DE8556 /* BooksDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksDataService.swift; sourceTree = "<group>"; };
 		1B0434A72644153C00DE8556 /* BooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
-		1B0434AC26441A4700DE8556 /* BookListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListsView.swift; sourceTree = "<group>"; };
+		1B0434AC26441A4700DE8556 /* BookOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookOverviewView.swift; sourceTree = "<group>"; };
 		1B0434B0264420BD00DE8556 /* BookUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookUpdate.swift; sourceTree = "<group>"; };
 		1B3F016E2642B7E100665327 /* StoriesScrollViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesScrollViewItem.swift; sourceTree = "<group>"; };
 		1B570376263943AC00BCB707 /* MostPopularArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticle.swift; sourceTree = "<group>"; };
@@ -232,7 +232,7 @@
 		1B0434AB26441A2400DE8556 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1B0434AC26441A4700DE8556 /* BookListsView.swift */,
+				1B0434AC26441A4700DE8556 /* BookOverviewView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -649,7 +649,7 @@
 				1B0434AA2644153C00DE8556 /* BooksViewModel.swift in Sources */,
 				1B0434A526440CFA00DE8556 /* BooksDataService.swift in Sources */,
 				1B57037F2639446400BCB707 /* MediaMetadata.swift in Sources */,
-				1B0434AF26441A4700DE8556 /* BookListsView.swift in Sources */,
+				1B0434AF26441A4700DE8556 /* BookOverviewView.swift in Sources */,
 				1B625BBD26353980009D7C10 /* MostPopularData.swift in Sources */,
 				1B57037B2639445200BCB707 /* MostPopularArticleType.swift in Sources */,
 				1B625BC9263539A0009D7C10 /* AppConstants.swift in Sources */,
@@ -692,7 +692,7 @@
 				1B8522B52633C1DB0082E7C1 /* LoadingView.swift in Sources */,
 				1B748DFE263995A60024CCD1 /* Section.swift in Sources */,
 				1B3F016F2642B7E100665327 /* StoriesScrollViewItem.swift in Sources */,
-				1B0434AD26441A4700DE8556 /* BookListsView.swift in Sources */,
+				1B0434AD26441A4700DE8556 /* BookOverviewView.swift in Sources */,
 				1B0434A82644153C00DE8556 /* BooksViewModel.swift in Sources */,
 				1B625BE42636BD83009D7C10 /* RemoteImage.swift in Sources */,
 				1B8522BB2633C7510082E7C1 /* NetworkError.swift in Sources */,
@@ -731,7 +731,7 @@
 				1B5703802639446600BCB707 /* Media.swift in Sources */,
 				1B748E0C263A93C20024CCD1 /* TopStoriesViewModel.swift in Sources */,
 				1B748E0626399D530024CCD1 /* TopStoriesDataService.swift in Sources */,
-				1B0434AE26441A4700DE8556 /* BookListsView.swift in Sources */,
+				1B0434AE26441A4700DE8556 /* BookOverviewView.swift in Sources */,
 				1B57037C2639446000BCB707 /* MostPopularArticle.swift in Sources */,
 				1B8522E426352EEB0082E7C1 /* MostPopularViewModel.swift in Sources */,
 				1B748E15263ACEDB0024CCD1 /* StoryData.swift in Sources */,
