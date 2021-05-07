@@ -12,16 +12,11 @@ struct BooksScrollView: View {
     var body: some View {
 
         ScrollView(.horizontal, showsIndicators: true, content: {
-            HStack {
+            HStack(spacing: 20.0) {
                 ForEach(books, id: \.self) { book in
-                    VStack(alignment: .leading, spacing: 8) {
-                        if let imageURL = book.bookImage {
-                            RemoteImage(url: imageURL, size: CGSize(width: 150, height: 150))
-                        }
-                    }
+                    RemoteImage(url: book.bookImage, size: CGSize(width: 150, height: 150))
                 }
             }
-            .frame(width: 150, height: 150)
         })
     }
 }

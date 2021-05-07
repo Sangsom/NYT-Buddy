@@ -11,9 +11,30 @@ struct BookListsView: View {
     var lists: [BooksOverviewResults.List]
 
     var body: some View {
-        List(lists) { item in
-            BooksScrollView(books: item.books)
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack {
+                ForEach(lists) { item in
+                    VStack(alignment: .leading, spacing: 10.0) {
+                        Text(item.name)
+                            .font(.headline)
+                            .foregroundColor(.secondary)
+                            .textCase(.uppercase)
+
+                        BooksScrollView(books: item.books)
+
+                        HStack {
+                            Spacer()
+                            NavigationLink(
+                                destination: Text("Destination"),
+                                label: {
+                                    Text("Show all")
+                                })
+                        }
+                    }
+                }
+            }
         }
+        .padding(.horizontal)
     }
 }
 
