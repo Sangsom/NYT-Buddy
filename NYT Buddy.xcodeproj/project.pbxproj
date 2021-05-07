@@ -240,11 +240,27 @@
 		1B0434AB26441A2400DE8556 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1B0434AC26441A4700DE8556 /* BookOverviewView.swift */,
+				1B0434BD2645654900DE8556 /* BookOverviewView */,
+				1B0434BC2645651E00DE8556 /* BookListView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1B0434BC2645651E00DE8556 /* BookListView */ = {
+			isa = PBXGroup;
+			children = (
 				1B0434B426453EC900DE8556 /* BookListsView.swift */,
 				1B0434B82645461300DE8556 /* BooksScrollView.swift */,
 			);
-			path = Views;
+			path = BookListView;
+			sourceTree = "<group>";
+		};
+		1B0434BD2645654900DE8556 /* BookOverviewView */ = {
+			isa = PBXGroup;
+			children = (
+				1B0434AC26441A4700DE8556 /* BookOverviewView.swift */,
+			);
+			path = BookOverviewView;
 			sourceTree = "<group>";
 		};
 		1B3F016D2642B7AC00665327 /* StoriesScrollView */ = {
