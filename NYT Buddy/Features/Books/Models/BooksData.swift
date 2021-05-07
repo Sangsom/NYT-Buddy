@@ -39,7 +39,12 @@ struct BooksOverviewResults: Codable {
         }
 
         #if DEBUG
-        static let exampleData = List(id: 704, name: "Combined Print & E-Book Fiction", updated: .WEEKLY, image: nil, books: Array(repeating: Book.exampleData, count: 5))
+        static let exampleData = List(
+            id: 704,
+            name: "Combined Print & E-Book Fiction",
+            updated: .WEEKLY,
+            image: nil,
+            books: Array(repeating: Book.exampleData, count: 5))
         #endif
     }
 
@@ -75,7 +80,20 @@ struct BooksOverviewResults: Codable {
         }
 
         #if DEBUG
-        static let exampleData = Book(ageGroup: "", author: "John Grisham", contributor: "by John Grisham", contributorNote: "", created: "2021-05-05 22:17:28", description: "Samuel Sooleymon receives a basketball scholarship to North Carolina Central and determines to bring his family over from a civil war-ravaged South Sudan.", price: "0.0", isbn13: "9780385547680", isbn10: "0385547684", publisher: "Doubleday", rank: 1, title: "SOOLEY", updated: "2021-05-05 22:21:53")
+        static let exampleData = Book(
+            ageGroup: "",
+            author: "John Grisham",
+            contributor: "by John Grisham",
+            contributorNote: "",
+            created: "2021-05-05 22:17:28",
+            description: "Samuel Sooleymon receives a basketball scholarship to North Carolina Central and determines to bring his family over from a civil war-ravaged South Sudan.",
+            price: "0.0",
+            isbn13: "9780385547680",
+            isbn10: "0385547684",
+            publisher: "Doubleday",
+            rank: 1,
+            title: "SOOLEY",
+            updated: "2021-05-05 22:21:53")
         #endif
     }
 }
