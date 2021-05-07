@@ -11,7 +11,9 @@ struct BookListsView: View {
     var lists: [BooksOverviewResults.List]
 
     var body: some View {
-        Text("Hello, World!")
+        List(lists) { item in
+            BooksScrollView(books: item.books)
+        }
     }
 }
 

@@ -24,6 +24,9 @@
 		1B0434B526453EC900DE8556 /* BookListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434B426453EC900DE8556 /* BookListsView.swift */; };
 		1B0434B626453EC900DE8556 /* BookListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434B426453EC900DE8556 /* BookListsView.swift */; };
 		1B0434B726453EC900DE8556 /* BookListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434B426453EC900DE8556 /* BookListsView.swift */; };
+		1B0434B92645461300DE8556 /* BooksScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434B82645461300DE8556 /* BooksScrollView.swift */; };
+		1B0434BA2645461300DE8556 /* BooksScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434B82645461300DE8556 /* BooksScrollView.swift */; };
+		1B0434BB2645461300DE8556 /* BooksScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434B82645461300DE8556 /* BooksScrollView.swift */; };
 		1B3F016F2642B7E100665327 /* StoriesScrollViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F016E2642B7E100665327 /* StoriesScrollViewItem.swift */; };
 		1B570377263943AD00BCB707 /* MostPopularArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B570376263943AC00BCB707 /* MostPopularArticle.swift */; };
 		1B570379263943EB00BCB707 /* MostPopularArticleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B570378263943EB00BCB707 /* MostPopularArticleType.swift */; };
@@ -125,6 +128,7 @@
 		1B0434AC26441A4700DE8556 /* BookOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookOverviewView.swift; sourceTree = "<group>"; };
 		1B0434B0264420BD00DE8556 /* BookUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookUpdate.swift; sourceTree = "<group>"; };
 		1B0434B426453EC900DE8556 /* BookListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListsView.swift; sourceTree = "<group>"; };
+		1B0434B82645461300DE8556 /* BooksScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksScrollView.swift; sourceTree = "<group>"; };
 		1B3F016E2642B7E100665327 /* StoriesScrollViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesScrollViewItem.swift; sourceTree = "<group>"; };
 		1B570376263943AC00BCB707 /* MostPopularArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticle.swift; sourceTree = "<group>"; };
 		1B570378263943EB00BCB707 /* MostPopularArticleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticleType.swift; sourceTree = "<group>"; };
@@ -238,6 +242,7 @@
 			children = (
 				1B0434AC26441A4700DE8556 /* BookOverviewView.swift */,
 				1B0434B426453EC900DE8556 /* BookListsView.swift */,
+				1B0434B82645461300DE8556 /* BooksScrollView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -642,6 +647,7 @@
 			files = (
 				1B5703812639446700BCB707 /* Media.swift in Sources */,
 				1B625BB526353950009D7C10 /* MostPopularDataService.swift in Sources */,
+				1B0434BB2645461300DE8556 /* BooksScrollView.swift in Sources */,
 				1B748E0426399D490024CCD1 /* TopStoriesDataServiceTests.swift in Sources */,
 				1B0434B3264420BD00DE8556 /* BookUpdate.swift in Sources */,
 				1B748E1E263AE16F0024CCD1 /* StoriesScrollView.swift in Sources */,
@@ -694,6 +700,7 @@
 				1B85229F2632C19D0082E7C1 /* MostPopularViewModel.swift in Sources */,
 				1B8522812631AD3E0082E7C1 /* NYT_BuddyApp.swift in Sources */,
 				1B0434A326440CFA00DE8556 /* BooksDataService.swift in Sources */,
+				1B0434B92645461300DE8556 /* BooksScrollView.swift in Sources */,
 				1B8522AB2632F4CA0082E7C1 /* Period.swift in Sources */,
 				1B8522B52633C1DB0082E7C1 /* LoadingView.swift in Sources */,
 				1B748DFE263995A60024CCD1 /* Section.swift in Sources */,
@@ -734,6 +741,7 @@
 				1B748E1D263AE16F0024CCD1 /* StoriesScrollView.swift in Sources */,
 				1B8522E726352F6D0082E7C1 /* MostPopularDataService.swift in Sources */,
 				1B57037E2639446400BCB707 /* MediaMetadata.swift in Sources */,
+				1B0434BA2645461300DE8556 /* BooksScrollView.swift in Sources */,
 				1B8522EA26352F820082E7C1 /* NetworkError.swift in Sources */,
 				1B8522D626352A630082E7C1 /* Period.swift in Sources */,
 				1B5703802639446600BCB707 /* Media.swift in Sources */,
