@@ -9,7 +9,7 @@ import Foundation
 
 class BooksDataService {
     // MARK: - Custom methods
-    func fetchListNames(completion: @escaping (Result<[BookList], NetworkError>) -> Void) {
+    func fetchListNames(completion: @escaping (Result<[BooksOverviewResults.List], NetworkError>) -> Void) {
 
         guard let url = createURL() else {
             return completion(.failure(.badURL))
@@ -22,10 +22,10 @@ class BooksDataService {
                 return completion(.failure(.noData))
             }
             
-            let response = try? JSONDecoder().decode(BooksData.self, from: data)
+            let response = try? JSONDecoder().decode(BooksOverviewData.self, from: data)
 
             if let response = response {
-                completion(.success(response.results))
+                completion(.success(response.results.lists))
             } else {
                 completion(.failure(.decodingError))
             }
@@ -36,7 +36,7 @@ class BooksDataService {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "api.nytimes.com"
-        urlComponents.path = "/svc/books/v3/lists/names.json"
+        urlComponents.path = "/svc/books/v3/lists/overview.json"
 
         let apiQueryItem = URLQueryItem(name: "api-key", value: Constants.API.NYT_API_KEY)
         urlComponents.queryItems = [apiQueryItem]

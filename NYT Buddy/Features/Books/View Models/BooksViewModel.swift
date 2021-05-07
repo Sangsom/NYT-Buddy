@@ -11,7 +11,7 @@ class BooksViewModel: ObservableObject {
     // MARK: - Properties
     var booksDataService: BooksDataService?
 
-    @Published var booksList = [BookList]()
+    @Published var booksList = [BooksOverviewResults.List]()
 
     @Published private(set) var state = LoadingState.idle
 

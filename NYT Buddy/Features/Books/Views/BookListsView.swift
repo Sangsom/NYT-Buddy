@@ -15,7 +15,7 @@ struct BookListsView: View {
     var body: some View {
         ZStack {
             List(booksViewModel.booksList) { item in
-                Text(item.displayName)
+                Text(item.name)
             }
             .blur(radius: booksViewModel.state == .loading ? 4 : 0)
 
