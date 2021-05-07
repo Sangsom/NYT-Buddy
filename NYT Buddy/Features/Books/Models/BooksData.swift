@@ -48,7 +48,7 @@ struct BooksOverviewResults: Codable {
         #endif
     }
 
-    struct Book: Codable {
+    struct Book: Codable, Hashable {
         var ageGroup: String
         var author: String
         var contributor: String
@@ -62,6 +62,7 @@ struct BooksOverviewResults: Codable {
         var rank: Int
         var title: String
         var updated: String
+        var bookImage: String
 
         enum CodingKeys: String, CodingKey {
             case ageGroup = "age_group"
@@ -77,6 +78,7 @@ struct BooksOverviewResults: Codable {
             case rank
             case title
             case updated = "updated_date"
+            case bookImage = "book_image"
         }
 
         #if DEBUG
@@ -93,7 +95,8 @@ struct BooksOverviewResults: Codable {
             publisher: "Doubleday",
             rank: 1,
             title: "SOOLEY",
-            updated: "2021-05-05 22:21:53")
+            updated: "2021-05-05 22:21:53",
+            bookImage: "https://storage.googleapis.com/du-prd/books/images/9780385547680.jpg")
         #endif
     }
 }
