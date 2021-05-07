@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BookDetailsView: View {
+    var book: BooksOverviewResults.Book
+
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -15,6 +17,6 @@ struct BookDetailsView: View {
 
 struct BookDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        BookDetailsView()
+        BookDetailsView(book: BooksOverviewResults.Book.exampleData)
     }
 }

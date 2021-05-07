@@ -14,7 +14,11 @@ struct BooksScrollView: View {
         ScrollView(.horizontal, showsIndicators: true, content: {
             HStack(spacing: 20.0) {
                 ForEach(books, id: \.self) { book in
-                    RemoteImage(url: book.bookImage, size: CGSize(width: 150, height: 150))
+                    NavigationLink(
+                        destination: BookDetailsView(book: book),
+                        label: {
+                            RemoteImage(url: book.bookImage, size: CGSize(width: 150, height: 150))
+                        })
                 }
             }
         })
