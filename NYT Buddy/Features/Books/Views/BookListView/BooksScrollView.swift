@@ -17,7 +17,7 @@ struct BooksScrollView: View {
                     NavigationLink(
                         destination: BookDetailsView(book: book),
                         label: {
-                            RemoteImage(url: book.bookImage, size: CGSize(width: 150, height: 150))
+                            RemoteImage(url: book.bookImage, size: CGSize(width: 150, height: 150), aspectRatio: .fit)
                         })
                 }
             }
