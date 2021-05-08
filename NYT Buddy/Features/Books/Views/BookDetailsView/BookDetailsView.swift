@@ -13,13 +13,19 @@ struct BookDetailsView: View {
 
     // MARK: - Body
     var body: some View {
-        VStack(alignment: .leading, spacing: 10.0, content: {
-            if let imageUrl = book.bookImage {
-                GeometryReader { geo in
-                    RemoteImage(url: imageUrl, size: CGSize(width: geo.size.width, height: geo.size.height / 3))
-                }
-            }
-        })
+        GeometryReader { geo in
+            VStack(alignment: .leading, spacing: 10.0, content: {
+                if let imageUrl = book.bookImage {
+                        RemoteImage(
+                            url: imageUrl,
+                            size: CGSize(width: geo.size.width, height: geo.size.height / 3),
+                            aspectRatio: .fit)
+                    }
+                Text(book.title)
+
+                Spacer()
+            })
+        }
     }
 }
 
