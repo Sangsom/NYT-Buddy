@@ -25,7 +25,7 @@ struct BookListsView: View {
                         HStack {
                             Spacer()
                             NavigationLink(
-                                destination: Text("Destination"),
+                                destination: BooksByListView(booksList: item),
                                 label: {
                                     Text("Show all")
                                 })
