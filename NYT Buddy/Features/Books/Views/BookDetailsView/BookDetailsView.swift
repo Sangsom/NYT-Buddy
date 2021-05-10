@@ -10,6 +10,8 @@ import MobileCoreServices
 
 struct BookDetailsView: View {
     // MARK: - Properties
+    @Environment(\.openURL) var openURL
+
     var book: BooksOverviewResults.Book
 
     // MARK: - Body
@@ -60,11 +62,30 @@ struct BookDetailsView: View {
                     })
                 }
 
+                Divider()
+
+                if book.buyLinks.count > 0,
+                   let links = book.buyLinks {
+                    Text("Shop links".uppercased())
+                        .font(.headline)
+
+                    ForEach(links, id: \.self) { link in
+                        Button("\(link.name)") {
+                            openFullStory(link: link)
+                        }
+                    }
+                }
+
                 Spacer()
             })
             .navigationBarTitle("", displayMode: .inline)
             .padding(.horizontal)
         }
+    }
+
+    // MARK: - Custom methods
+    func openFullStory(link: BuyLink) {
+        openURL(link.url)
     }
 }
 

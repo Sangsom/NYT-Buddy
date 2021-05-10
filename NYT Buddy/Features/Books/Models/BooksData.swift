@@ -63,6 +63,7 @@ struct BooksOverviewResults: Codable {
         var title: String
         var updated: String
         var bookImage: String
+        var buyLinks: [BuyLink]
 
         enum CodingKeys: String, CodingKey {
             case ageGroup = "age_group"
@@ -79,6 +80,7 @@ struct BooksOverviewResults: Codable {
             case title
             case updated = "updated_date"
             case bookImage = "book_image"
+            case buyLinks = "buy_links"
         }
 
         #if DEBUG
@@ -96,7 +98,8 @@ struct BooksOverviewResults: Codable {
             rank: 1,
             title: "SOOLEY",
             updated: "2021-05-05 22:21:53",
-            bookImage: "https://storage.googleapis.com/du-prd/books/images/9780385547680.jpg")
+            bookImage: "https://storage.googleapis.com/du-prd/books/images/9780385547680.jpg",
+            buyLinks: Array(repeating: BuyLink.exampleData, count: 5))
         #endif
     }
 }
