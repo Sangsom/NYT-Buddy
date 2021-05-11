@@ -26,6 +26,7 @@ struct BooksOverviewResults: Codable {
     struct List: Codable, Identifiable {
         var id: Int
         var name: String
+        var listNameEncoded: String
         var updated: BookUpdate
         var image: String?
         var books: [Book]
@@ -33,6 +34,7 @@ struct BooksOverviewResults: Codable {
         enum CodingKeys: String, CodingKey {
             case id = "list_id"
             case name = "display_name"
+            case listNameEncoded = "list_name_encoded"
             case updated
             case image = "list_image"
             case books
@@ -42,6 +44,7 @@ struct BooksOverviewResults: Codable {
         static let exampleData = List(
             id: 704,
             name: "Combined Print & E-Book Fiction",
+            listNameEncoded: "combined-print-and-e-book-fiction",
             updated: .WEEKLY,
             image: nil,
             books: Array(repeating: Book.exampleData, count: 5))
