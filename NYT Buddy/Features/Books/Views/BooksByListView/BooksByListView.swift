@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct BooksByListView: View {
-    let booksList: BooksOverviewResults.List
+    let listName: String
 
     var body: some View {
-        Text(booksList.name)
+        Text(listName)
     }
 }
 
 struct BooksByListView_Previews: PreviewProvider {
     static var previews: some View {
-        BooksByListView(booksList: BooksOverviewResults.List.exampleData)
+        BooksByListView(listName: "combined-print-and-e-book-fiction")
     }
 }
