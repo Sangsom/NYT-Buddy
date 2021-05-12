@@ -31,7 +31,8 @@ struct BookListsView: View {
                             NavigationLink(
                                 destination:
                                     BooksByListView(listName: item.listNameEncoded)
-                                    .environmentObject(booksViewModel),
+                                    .environmentObject(booksViewModel)
+                                    .navigationBarTitle(item.name, displayMode: .inline),
                                 label: {
                                     Text("Show all")
                                 })

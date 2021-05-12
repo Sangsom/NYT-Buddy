@@ -12,6 +12,7 @@ class BooksViewModel: ObservableObject {
     var booksDataService: BooksDataService?
 
     @Published var booksList = [BooksOverviewResults.List]()
+    @Published var booksByList = [BooksByListResults.Book]()
 
     @Published private(set) var state = LoadingState.idle
 
@@ -47,8 +48,7 @@ class BooksViewModel: ObservableObject {
             switch result {
             case .success(let bookListNames):
                 DispatchQueue.main.async {
-//                    self.booksList = bookListNames
-                    print(bookListNames)
+                    self.booksByList = bookListNames.books
                     self.state = .success
                 }
             case .failure(let error):
