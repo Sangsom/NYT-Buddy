@@ -15,8 +15,10 @@ struct BooksByListView: View {
 
     // MARK: - Body
     var body: some View {
-        Text(listName)
-            .onAppear(perform: loadData)
+        List(booksViewModel.booksByList) { book in
+            Text(book.title)
+        }
+        .onAppear(perform: loadData)
     }
 
     // MARK: - Custom methods

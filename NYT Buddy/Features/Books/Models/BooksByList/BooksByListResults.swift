@@ -20,7 +20,7 @@ struct BooksByListResults: Codable {
         case books
     }
 
-    struct Book: Codable {
+    struct Book: Codable, Identifiable {
         var rank: Int
         var isbn13: String
         var isbn10: String
@@ -31,6 +31,8 @@ struct BooksByListResults: Codable {
         var contributor: String
         var bookImage: URL
         var buyLinks: [BuyLink]
+
+        var id: String { isbn13 }
 
         enum CodingKeys: String, CodingKey {
             case rank
