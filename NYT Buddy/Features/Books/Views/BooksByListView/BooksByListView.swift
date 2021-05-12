@@ -16,7 +16,11 @@ struct BooksByListView: View {
     // MARK: - Body
     var body: some View {
         List(booksViewModel.booksByList) { book in
-            BookByListItemView(book: book)
+            NavigationLink(
+                destination: Text("Destination"),
+                label: {
+                    BookByListItemView(book: book)
+                })
         }
         .onAppear(perform: loadData)
     }
@@ -27,6 +31,7 @@ struct BooksByListView: View {
     }
 }
 
+// MARK: - Preview
 struct BooksByListView_Previews: PreviewProvider {
     static var previews: some View {
         BooksByListView(listName: "combined-print-and-e-book-fiction")

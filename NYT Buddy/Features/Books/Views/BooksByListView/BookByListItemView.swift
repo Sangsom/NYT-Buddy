@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct BookByListItemView: View {
+    // MARK: - Properties
     var book: BooksByListResults.Book
 
+    // MARK: - Body
     var body: some View {
         HStack {
             RemoteImage(url: book.bookImage.absoluteString, size: CGSize(width: 150, height: 150), aspectRatio: .fit)
@@ -28,6 +30,7 @@ struct BookByListItemView: View {
     }
 }
 
+// MARK: - Preview
 struct BookByListItemView_Previews: PreviewProvider {
     static var previews: some View {
         BookByListItemView(book: BooksByListResults.Book.exampleData)
