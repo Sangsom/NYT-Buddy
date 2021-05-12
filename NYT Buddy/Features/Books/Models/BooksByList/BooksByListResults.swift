@@ -48,3 +48,19 @@ struct BooksByListResults: Codable {
         }
     }
 }
+
+#if DEBUG
+extension BooksByListResults.Book {
+    static let exampleData = BooksByListResults.Book(
+        rank: 1,
+        isbn13: "9780385547680",
+        isbn10: "0385547684",
+        publisher: "Doubleday",
+        description: "Samuel Sooleymon receives a basketball scholarship to North Carolina Central and determines to bring his family over from a civil war-ravaged South Sudan.",
+        title: "SOOLEY",
+        author: "John Grisham",
+        contributor: "by John Grisham",
+        bookImage: URL(string: "https://storage.googleapis.com/du-prd/books/images/9780385547680.jpg")!,
+        buyLinks: Array.init(repeating: BuyLink.exampleData, count: 5))
+}
+#endif
