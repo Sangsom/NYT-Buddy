@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct BookListsView: View {
+    // MARK: - Properties
+    @EnvironmentObject var booksViewModel: BooksViewModel
+
     var lists: [BooksOverviewResults.List]
 
+    // MARK: - Body
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack {
-                ForEach(lists) { item in
+                ForEach(lists, id: \.self.name) { item in
                     VStack(alignment: .leading, spacing: 10.0) {
                         Text(item.name)
                             .font(.headline)
@@ -25,7 +29,9 @@ struct BookListsView: View {
                         HStack {
                             Spacer()
                             NavigationLink(
-                                destination: BooksByListView(listName: item.listNameEncoded),
+                                destination:
+                                    BooksByListView(listName: item.listNameEncoded)
+                                    .environmentObject(booksViewModel),
                                 label: {
                                     Text("Show all")
                                 })

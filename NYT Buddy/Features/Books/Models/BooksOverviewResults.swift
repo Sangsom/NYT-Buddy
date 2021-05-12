@@ -1,16 +1,11 @@
 //
-//  BooksData.swift
+//  BooksOverviewResults.swift
 //  NYT Buddy
 //
-//  Created by Rinalds Domanovs on 06/05/2021.
+//  Created by Rinalds Domanovs on 11/05/2021.
 //
 
 import Foundation
-
-struct BooksOverviewData: Codable {
-    let status: String
-    let results: BooksOverviewResults
-}
 
 struct BooksOverviewResults: Codable {
     var bestSellersDate: String

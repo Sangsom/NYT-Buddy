@@ -24,7 +24,7 @@ class BooksViewModel: ObservableObject {
     func fetchBooksListNames() {
         state = .loading
 
-        booksDataService?.fetchListNames(completion: { result in
+        booksDataService?.fetchOverview(completion: { result in
             switch result {
             case .success(let bookListNames):
                 DispatchQueue.main.async {
@@ -34,6 +34,26 @@ class BooksViewModel: ObservableObject {
             case .failure(let error):
                 DispatchQueue.main.async {
                     print("Failed to fetch books data: \(error.localizedDescription)")
+                    self.state = .failed(error)
+                }
+            }
+        })
+    }
+
+    func fetchBooksByList(_ listName: String) {
+        state = .loading
+
+        booksDataService?.fetchBestSellersByList(listName, completion: { result in
+            switch result {
+            case .success(let bookListNames):
+                DispatchQueue.main.async {
+//                    self.booksList = bookListNames
+                    print(bookListNames)
+                    self.state = .success
+                }
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    print("Failed to fetch books by list data: \(error.localizedDescription)")
                     self.state = .failed(error)
                 }
             }

@@ -16,6 +16,7 @@ struct BookOverviewView: View {
         ZStack {
             BookListsView(lists: booksViewModel.booksList)
                 .blur(radius: booksViewModel.state == .loading ? 4 : 0)
+                .environmentObject(booksViewModel)
 
             if booksViewModel.state == .loading {
                 LoadingView()

@@ -9,7 +9,7 @@ import Foundation
 
 class BooksDataService {
     // MARK: - Custom methods
-    func fetchListNames(completion: @escaping (Result<[BooksOverviewResults.List], NetworkError>) -> Void) {
+    func fetchOverview(completion: @escaping (Result<[BooksOverviewResults.List], NetworkError>) -> Void) {
 
         guard let url = createURL() else {
             return completion(.failure(.badURL))
@@ -32,11 +32,39 @@ class BooksDataService {
         }.resume()
     }
 
-    func createURL() -> URL? {
+    func fetchBestSellersByList(_ listName: String, completion: @escaping (Result<[BooksOverviewResults.List], NetworkError>) -> Void) {
+        guard let url = createURL(for: listName) else {
+            return completion(.failure(.badURL))
+        }
+
+        let request = URLRequest(url: url)
+        print(request)
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                return completion(.failure(.noData))
+            }
+
+            let response = try? JSONDecoder().decode(BooksOverviewData.self, from: data)
+
+            if let response = response {
+                completion(.success(response.results.lists))
+            } else {
+                completion(.failure(.decodingError))
+            }
+        }.resume()
+    }
+
+    func createURL(for listName: String? = nil) -> URL? {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "api.nytimes.com"
-        urlComponents.path = "/svc/books/v3/lists/overview.json"
+
+        if let listName = listName {
+            urlComponents.path = "/svc/books/v3/lists/\(listName).json"
+        } else {
+            urlComponents.path = "/svc/books/v3/lists/overview.json"
+        }
 
         let apiQueryItem = URLQueryItem(name: "api-key", value: Constants.API.NYT_API_KEY)
         urlComponents.queryItems = [apiQueryItem]
