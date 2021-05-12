@@ -17,7 +17,7 @@ struct BooksByListView: View {
     var body: some View {
         List(booksViewModel.booksByList) { book in
             NavigationLink(
-                destination: Text("Destination"),
+                destination: BookByListDetailsView(book: book),
                 label: {
                     BookByListItemView(book: book)
                 })
