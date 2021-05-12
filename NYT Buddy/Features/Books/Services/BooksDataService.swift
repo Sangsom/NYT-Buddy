@@ -38,7 +38,6 @@ class BooksDataService {
         }
 
         let request = URLRequest(url: url)
-        print(request)
 
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
