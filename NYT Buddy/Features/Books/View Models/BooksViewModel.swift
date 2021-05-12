@@ -48,7 +48,7 @@ class BooksViewModel: ObservableObject {
             switch result {
             case .success(let bookListNames):
                 DispatchQueue.main.async {
-                    self.booksByList = bookListNames.books
+                    self.booksByList = bookListNames
                     self.state = .success
                 }
             case .failure(let error):
