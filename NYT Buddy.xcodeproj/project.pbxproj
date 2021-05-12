@@ -225,8 +225,7 @@
 		1B04349C264408A600DE8556 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1B04349D264408B500DE8556 /* BooksOverviewData.swift */,
-				1B0434CA264AAEBF00DE8556 /* BooksOverviewResults.swift */,
+				1B0434CC264BAE6500DE8556 /* BooksOverview */,
 				1B0434C326495C8C00DE8556 /* BuyLink.swift */,
 			);
 			path = Models;
@@ -290,6 +289,15 @@
 				1B0434C826496FA300DE8556 /* BooksByListView.swift */,
 			);
 			path = BooksByListView;
+			sourceTree = "<group>";
+		};
+		1B0434CC264BAE6500DE8556 /* BooksOverview */ = {
+			isa = PBXGroup;
+			children = (
+				1B04349D264408B500DE8556 /* BooksOverviewData.swift */,
+				1B0434CA264AAEBF00DE8556 /* BooksOverviewResults.swift */,
+			);
+			path = BooksOverview;
 			sourceTree = "<group>";
 		};
 		1B3F016D2642B7AC00665327 /* StoriesScrollView */ = {
