@@ -43,7 +43,7 @@ class BooksViewModel: ObservableObject {
     func fetchBooksByList(_ listName: String) {
         state = .loading
 
-        booksDataService?.fetchBestSellersByList(listName, completion: { result in
+        booksDataService?.fetchBooksByList(listName, completion: { result in
             switch result {
             case .success(let bookListNames):
                 DispatchQueue.main.async {

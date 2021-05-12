@@ -32,7 +32,7 @@ class BooksDataService {
         }.resume()
     }
 
-    func fetchBestSellersByList(_ listName: String, completion: @escaping (Result<[BooksOverviewResults.List], NetworkError>) -> Void) {
+    func fetchBooksByList(_ listName: String, completion: @escaping (Result<BooksByListResults, NetworkError>) -> Void) {
         guard let url = createURL(for: listName) else {
             return completion(.failure(.badURL))
         }
@@ -45,10 +45,10 @@ class BooksDataService {
                 return completion(.failure(.noData))
             }
 
-            let response = try? JSONDecoder().decode(BooksOverviewData.self, from: data)
+            let response = try? JSONDecoder().decode(BooksByListData.self, from: data)
 
             if let response = response {
-                completion(.success(response.results.lists))
+                completion(.success(response.results))
             } else {
                 completion(.failure(.decodingError))
             }
