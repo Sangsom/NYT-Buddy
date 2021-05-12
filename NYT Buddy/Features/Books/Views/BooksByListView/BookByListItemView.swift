@@ -17,6 +17,11 @@ struct BookByListItemView: View {
             RemoteImage(url: book.bookImage.absoluteString, size: CGSize(width: 150, height: 150), aspectRatio: .fit)
 
             VStack(alignment: .leading, spacing: 5) {
+                Text("#\(book.rank)")
+                    .font(.title)
+                    .fontWeight(.medium)
+                    .foregroundColor(Color("AccentColor"))
+
                 Text(book.title)
 
                 Group {
@@ -27,6 +32,7 @@ struct BookByListItemView: View {
                 .font(.caption)
             }
         }
+        .frame(maxHeight: 150)
     }
 }
 
