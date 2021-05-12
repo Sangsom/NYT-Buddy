@@ -35,6 +35,7 @@
 		1B0434C926496FA300DE8556 /* BooksByListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434C826496FA300DE8556 /* BooksByListView.swift */; };
 		1B0434CB264AAEBF00DE8556 /* BooksOverviewResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434CA264AAEBF00DE8556 /* BooksOverviewResults.swift */; };
 		1B0434CF264BAEA400DE8556 /* BooksByListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434CE264BAEA400DE8556 /* BooksByListData.swift */; };
+		1B0434D3264BBBD200DE8556 /* BooksByListResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434D2264BBBD200DE8556 /* BooksByListResults.swift */; };
 		1B3F016F2642B7E100665327 /* StoriesScrollViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F016E2642B7E100665327 /* StoriesScrollViewItem.swift */; };
 		1B570377263943AD00BCB707 /* MostPopularArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B570376263943AC00BCB707 /* MostPopularArticle.swift */; };
 		1B570379263943EB00BCB707 /* MostPopularArticleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B570378263943EB00BCB707 /* MostPopularArticleType.swift */; };
@@ -141,6 +142,7 @@
 		1B0434C826496FA300DE8556 /* BooksByListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksByListView.swift; sourceTree = "<group>"; };
 		1B0434CA264AAEBF00DE8556 /* BooksOverviewResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksOverviewResults.swift; sourceTree = "<group>"; };
 		1B0434CE264BAEA400DE8556 /* BooksByListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksByListData.swift; sourceTree = "<group>"; };
+		1B0434D2264BBBD200DE8556 /* BooksByListResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksByListResults.swift; sourceTree = "<group>"; };
 		1B3F016E2642B7E100665327 /* StoriesScrollViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesScrollViewItem.swift; sourceTree = "<group>"; };
 		1B570376263943AC00BCB707 /* MostPopularArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticle.swift; sourceTree = "<group>"; };
 		1B570378263943EB00BCB707 /* MostPopularArticleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticleType.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				1B0434CE264BAEA400DE8556 /* BooksByListData.swift */,
+				1B0434D2264BBBD200DE8556 /* BooksByListResults.swift */,
 			);
 			path = BooksByList;
 			sourceTree = "<group>";
@@ -761,6 +764,7 @@
 				1B748E10263ACBA00024CCD1 /* Story.swift in Sources */,
 				1B748E02263997A90024CCD1 /* TopStoriesDataService.swift in Sources */,
 				1B570377263943AD00BCB707 /* MostPopularArticle.swift in Sources */,
+				1B0434D3264BBBD200DE8556 /* BooksByListResults.swift in Sources */,
 				1B8522AF2633BD6F0082E7C1 /* AppConstants.swift in Sources */,
 				1B0434CB264AAEBF00DE8556 /* BooksOverviewResults.swift in Sources */,
 				1B8522A62632D4150082E7C1 /* ArticleListItem.swift in Sources */,
