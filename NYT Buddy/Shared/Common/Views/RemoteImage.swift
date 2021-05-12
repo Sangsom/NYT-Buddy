@@ -39,6 +39,7 @@ struct RemoteImage: View {
     @StateObject private var loader: Loader
     var failure: Image
     var size: CGSize?
+    var aspectRatio: ContentMode
 
     var body: some View {
         if loader.state == .loading {
@@ -49,16 +50,17 @@ struct RemoteImage: View {
         } else {
             selectImage()
                 .resizable()
-                .scaledToFill()
+                .aspectRatio(contentMode: aspectRatio)
                 .frame(width: size?.width, height: size?.height)
                 .clipped()
         }
     }
 
-    init(url: String, failure: Image = Image(systemName: "multiply.circle"), size: CGSize? = nil) {
+    init(url: String, failure: Image = Image(systemName: "multiply.circle"), size: CGSize? = nil, aspectRatio: ContentMode = .fill) {
         _loader = StateObject(wrappedValue: Loader(url: url))
         self.failure = failure
         self.size = size
+        self.aspectRatio = aspectRatio
     }
 
     private func selectImage() -> Image {

@@ -34,3 +34,15 @@ Get Top Stories of different sections (arts, business, ...)
 - Show all stories of particular section.
 
 ![Top Stories](https://media.giphy.com/media/KKnlKVB6aUyGhtjJnv/giphy.gif)
+
+### Popular Books
+
+Get the Most Popular NYT Best Seller books.
+
+- See Best Seller List by categories.
+- Show top 15 books of particular category.
+- Get book details.
+- Copy ISBN number to `Clipboard`.
+- Open in browser link to buy book from different shops.
+
+![Popular Books](https://media.giphy.com/media/wZ9HsVg7Ho62iXcWVb/giphy.gif)
