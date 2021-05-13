@@ -7,6 +7,8 @@
 
 import XCTest
 
+@testable import NYT_Buddy
+
 class TopStoriesDataServiceTests: XCTestCase {
     var sut: TopStoriesDataService!
 
