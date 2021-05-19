@@ -48,6 +48,13 @@ struct NYT_BuddyApp: App {
                             Image(systemName: "book")
                             Text("Books")
                         }
+
+                        EmojiContentView()
+                            .tag(3)
+                            .tabItem {
+                                Image(systemName: "􀆭")
+                                Text("Emoji")
+                            }
                     }
             )
         }
