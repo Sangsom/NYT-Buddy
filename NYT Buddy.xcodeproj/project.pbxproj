@@ -155,6 +155,13 @@
 		1B8522ED26352F850082E7C1 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522BD2633C77B0082E7C1 /* LoadingState.swift */; };
 		1B8522F026352F940082E7C1 /* MostPopularData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85229B2632A9EF0082E7C1 /* MostPopularData.swift */; };
 		1B8522F326352FAA0082E7C1 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522AE2633BD6F0082E7C1 /* AppConstants.swift */; };
+		1BC7AC382655406200668E2D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1CFF3A2655008300855AE7 /* WidgetKit.framework */; };
+		1BC7AC392655406200668E2D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1CFF3C2655008300855AE7 /* SwiftUI.framework */; };
+		1BC7AC3C2655406200668E2D /* NYT_Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7AC3B2655406200668E2D /* NYT_Widgets.swift */; };
+		1BC7AC3F2655406300668E2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BC7AC3E2655406300668E2D /* Assets.xcassets */; };
+		1BC7AC412655406300668E2D /* NYT_Widgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7AC3D2655406200668E2D /* NYT_Widgets.intentdefinition */; };
+		1BC7AC422655406300668E2D /* NYT_Widgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7AC3D2655406200668E2D /* NYT_Widgets.intentdefinition */; };
+		1BC7AC452655406300668E2D /* NYT WidgetsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1BC7AC372655406200668E2D /* NYT WidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +186,13 @@
 			remoteGlobalIDString = 1B85227C2631AD3E0082E7C1;
 			remoteInfo = "NYT Buddy";
 		};
+		1BC7AC432655406300668E2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B8522752631AD3E0082E7C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BC7AC362655406200668E2D;
+			remoteInfo = "NYT WidgetsExtension";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -189,6 +203,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				1B1CFF492655008400855AE7 /* Emoji WidgetExtension.appex in Embed App Extensions */,
+				1BC7AC452655406300668E2D /* NYT WidgetsExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +286,11 @@
 		1B8522CA2635291B0082E7C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B8522D226352A490082E7C1 /* PeriodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodTests.swift; sourceTree = "<group>"; };
 		1B8522E026352EE50082E7C1 /* MostPopularViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularViewModelTests.swift; sourceTree = "<group>"; };
+		1BC7AC372655406200668E2D /* NYT WidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NYT WidgetsExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BC7AC3B2655406200668E2D /* NYT_Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYT_Widgets.swift; sourceTree = "<group>"; };
+		1BC7AC3D2655406200668E2D /* NYT_Widgets.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = NYT_Widgets.intentdefinition; sourceTree = "<group>"; };
+		1BC7AC3E2655406300668E2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1BC7AC402655406300668E2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +321,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BC7AC342655406200668E2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BC7AC392655406200668E2D /* SwiftUI.framework in Frameworks */,
+				1BC7AC382655406200668E2D /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +604,7 @@
 				1B8522C72635291B0082E7C1 /* NYT BuddyTests */,
 				1B625BA426353925009D7C10 /* Asynchronous NYT BuddyTests */,
 				1B1CFF3E2655008300855AE7 /* Emoji Widget */,
+				1BC7AC3A2655406200668E2D /* NYT Widgets */,
 				1B1CFF392655008300855AE7 /* Frameworks */,
 				1B85227E2631AD3E0082E7C1 /* Products */,
 			);
@@ -587,6 +617,7 @@
 				1B8522C62635291B0082E7C1 /* NYT BuddyTests.xctest */,
 				1B625BA326353925009D7C10 /* Asynchronous NYT BuddyTests.xctest */,
 				1B1CFF382655008200855AE7 /* Emoji WidgetExtension.appex */,
+				1BC7AC372655406200668E2D /* NYT WidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -724,6 +755,17 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		1BC7AC3A2655406200668E2D /* NYT Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				1BC7AC3B2655406200668E2D /* NYT_Widgets.swift */,
+				1BC7AC3D2655406200668E2D /* NYT_Widgets.intentdefinition */,
+				1BC7AC3E2655406300668E2D /* Assets.xcassets */,
+				1BC7AC402655406300668E2D /* Info.plist */,
+			);
+			path = "NYT Widgets";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -775,6 +817,7 @@
 			);
 			dependencies = (
 				1B1CFF482655008400855AE7 /* PBXTargetDependency */,
+				1BC7AC442655406300668E2D /* PBXTargetDependency */,
 			);
 			name = "NYT Buddy";
 			productName = "NYT Buddy";
@@ -799,6 +842,23 @@
 			productReference = 1B8522C62635291B0082E7C1 /* NYT BuddyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		1BC7AC362655406200668E2D /* NYT WidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BC7AC482655406300668E2D /* Build configuration list for PBXNativeTarget "NYT WidgetsExtension" */;
+			buildPhases = (
+				1BC7AC332655406200668E2D /* Sources */,
+				1BC7AC342655406200668E2D /* Frameworks */,
+				1BC7AC352655406200668E2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NYT WidgetsExtension";
+			productName = "NYT WidgetsExtension";
+			productReference = 1BC7AC372655406200668E2D /* NYT WidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -822,6 +882,9 @@
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 1B85227C2631AD3E0082E7C1;
 					};
+					1BC7AC362655406200668E2D = {
+						CreatedOnToolsVersion = 12.5;
+					};
 				};
 			};
 			buildConfigurationList = 1B8522782631AD3E0082E7C1 /* Build configuration list for PBXProject "NYT Buddy" */;
@@ -841,6 +904,7 @@
 				1B8522C52635291B0082E7C1 /* NYT BuddyTests */,
 				1B625BA226353925009D7C10 /* Asynchronous NYT BuddyTests */,
 				1B1CFF372655008200855AE7 /* Emoji WidgetExtension */,
+				1BC7AC362655406200668E2D /* NYT WidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -874,6 +938,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BC7AC352655406200668E2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BC7AC3F2655406300668E2D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -952,6 +1024,7 @@
 				1B625BE92636BE91009D7C10 /* MediaView.swift in Sources */,
 				1B6FB24D263BFD7400A86CCD /* StoryDetailsView.swift in Sources */,
 				1B85229C2632A9EF0082E7C1 /* MostPopularData.swift in Sources */,
+				1BC7AC422655406300668E2D /* NYT_Widgets.intentdefinition in Sources */,
 				1B6FB24F263C24C100A86CCD /* MultimediaView.swift in Sources */,
 				1B6FB251263C2F1000A86CCD /* ShowAllStoriesView.swift in Sources */,
 				1B570379263943EB00BCB707 /* MostPopularArticleType.swift in Sources */,
@@ -1050,6 +1123,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1BC7AC332655406200668E2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BC7AC412655406300668E2D /* NYT_Widgets.intentdefinition in Sources */,
+				1BC7AC3C2655406200668E2D /* NYT_Widgets.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1067,6 +1149,11 @@
 			isa = PBXTargetDependency;
 			target = 1B85227C2631AD3E0082E7C1 /* NYT Buddy */;
 			targetProxy = 1B8522CB2635291B0082E7C1 /* PBXContainerItemProxy */;
+		};
+		1BC7AC442655406300668E2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BC7AC362655406200668E2D /* NYT WidgetsExtension */;
+			targetProxy = 1BC7AC432655406300668E2D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1361,6 +1448,50 @@
 			};
 			name = Release;
 		};
+		1BC7AC462655406300668E2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M86S59A27L;
+				INFOPLIST_FILE = "NYT Widgets/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.domanov.NYT-Buddy.NYT-Widgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1BC7AC472655406300668E2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M86S59A27L;
+				INFOPLIST_FILE = "NYT Widgets/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.domanov.NYT-Buddy.NYT-Widgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1405,6 +1536,15 @@
 			buildConfigurations = (
 				1B8522CD2635291B0082E7C1 /* Debug */,
 				1B8522CE2635291B0082E7C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BC7AC482655406300668E2D /* Build configuration list for PBXNativeTarget "NYT WidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BC7AC462655406300668E2D /* Debug */,
+				1BC7AC472655406300668E2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
