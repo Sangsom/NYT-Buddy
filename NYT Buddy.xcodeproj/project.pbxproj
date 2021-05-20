@@ -67,9 +67,6 @@
 		1B0434F4264D06A500DE8556 /* StoryListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FB252263C330C00A86CCD /* StoryListItem.swift */; };
 		1B0434F5264D06A700DE8556 /* ShowAllStoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FB250263C2F1000A86CCD /* ShowAllStoriesView.swift */; };
 		1B0434F6264D06A700DE8556 /* ShowAllStoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FB250263C2F1000A86CCD /* ShowAllStoriesView.swift */; };
-		1B1CFF2E2654FD2100855AE7 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CFF2D2654FD2100855AE7 /* Emoji.swift */; };
-		1B1CFF302654FDA000855AE7 /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CFF2F2654FDA000855AE7 /* EmojiView.swift */; };
-		1B1CFF322654FE1D00855AE7 /* EmojiContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1CFF312654FE1D00855AE7 /* EmojiContentView.swift */; };
 		1B3F016F2642B7E100665327 /* StoriesScrollViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F016E2642B7E100665327 /* StoriesScrollViewItem.swift */; };
 		1B570377263943AD00BCB707 /* MostPopularArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B570376263943AC00BCB707 /* MostPopularArticle.swift */; };
 		1B570379263943EB00BCB707 /* MostPopularArticleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B570378263943EB00BCB707 /* MostPopularArticleType.swift */; };
@@ -212,9 +209,6 @@
 		1B0434D4264BD9BD00DE8556 /* BookByListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookByListItemView.swift; sourceTree = "<group>"; };
 		1B0434D7264BFA7B00DE8556 /* BookByListDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookByListDetailsView.swift; sourceTree = "<group>"; };
 		1B0434D9264D057D00DE8556 /* BooksDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksDataServiceTests.swift; sourceTree = "<group>"; };
-		1B1CFF2D2654FD2100855AE7 /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
-		1B1CFF2F2654FDA000855AE7 /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
-		1B1CFF312654FE1D00855AE7 /* EmojiContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiContentView.swift; sourceTree = "<group>"; };
 		1B1CFF332654FF9E00855AE7 /* NYT Buddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "NYT Buddy.entitlements"; sourceTree = "<group>"; };
 		1B1CFF3A2655008300855AE7 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		1B1CFF3C2655008300855AE7 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -578,9 +572,6 @@
 				1B8522842631AD3F0082E7C1 /* Assets.xcassets */,
 				1B8522892631AD3F0082E7C1 /* Info.plist */,
 				1B8522862631AD3F0082E7C1 /* Preview Content */,
-				1B1CFF2D2654FD2100855AE7 /* Emoji.swift */,
-				1B1CFF2F2654FDA000855AE7 /* EmojiView.swift */,
-				1B1CFF312654FE1D00855AE7 /* EmojiContentView.swift */,
 			);
 			path = "NYT Buddy";
 			sourceTree = "<group>";
@@ -947,11 +938,9 @@
 				1B8522A62632D4150082E7C1 /* ArticleListItem.swift in Sources */,
 				1B85229F2632C19D0082E7C1 /* MostPopularViewModel.swift in Sources */,
 				1B8522812631AD3E0082E7C1 /* NYT_BuddyApp.swift in Sources */,
-				1B1CFF2E2654FD2100855AE7 /* Emoji.swift in Sources */,
 				1B0434D8264BFA7B00DE8556 /* BookByListDetailsView.swift in Sources */,
 				1B0434BF2645659400DE8556 /* BookDetailsView.swift in Sources */,
 				1B0434A326440CFA00DE8556 /* BooksDataService.swift in Sources */,
-				1B1CFF302654FDA000855AE7 /* EmojiView.swift in Sources */,
 				1B0434B92645461300DE8556 /* BooksScrollView.swift in Sources */,
 				1B8522AB2632F4CA0082E7C1 /* Period.swift in Sources */,
 				1B8522B52633C1DB0082E7C1 /* LoadingView.swift in Sources */,
@@ -971,7 +960,6 @@
 				1B0434B1264420BD00DE8556 /* BookUpdate.swift in Sources */,
 				1B748E18263ACEED0024CCD1 /* Multimedia.swift in Sources */,
 				1B625BDF2636BC88009D7C10 /* MediaMetadata.swift in Sources */,
-				1B1CFF322654FE1D00855AE7 /* EmojiContentView.swift in Sources */,
 				1B8522B82633C64B0082E7C1 /* SelectPeriodView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
