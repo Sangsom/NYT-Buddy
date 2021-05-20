@@ -7,44 +7,35 @@
 
 import WidgetKit
 import SwiftUI
-import Intents
 
-struct Provider: IntentTimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
+struct NYTEntry: TimelineEntry {
+    let date: Date
+    let article: MostPopularArticle
+}
+
+struct Provider: TimelineProvider {
+    func placeholder(in context: Context) -> NYTEntry {
+        NYTEntry(date: Date(), article: MostPopularArticle.exampleData.first!)
     }
 
-    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
+    func getSnapshot(in context: Context, completion: @escaping (NYTEntry) -> Void) {
+        let entry = NYTEntry(date: Date(), article: MostPopularArticle.exampleData.first!)
         completion(entry)
     }
 
-    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
-            entries.append(entry)
-        }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
+    func getTimeline(in context: Context, completion: @escaping (Timeline<NYTEntry>) -> Void) {
+        let entry = NYTEntry(date: Date(), article: MostPopularArticle.exampleData.first!)
+        let timeline = Timeline(entries: [entry], policy: .never)
         completion(timeline)
     }
 }
 
-struct SimpleEntry: TimelineEntry {
-    let date: Date
-    let configuration: ConfigurationIntent
-}
+struct WidgetEntryView: View {
+    let entry: Provider.Entry
 
-struct NYT_WidgetsEntryView : View {
-    var entry: Provider.Entry
-
+    @ViewBuilder
     var body: some View {
-        Text(entry.date, style: .time)
+        Text(entry.article.abstract)
     }
 }
 
@@ -53,17 +44,18 @@ struct NYT_Widgets: Widget {
     let kind: String = "NYT_Widgets"
 
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-            NYT_WidgetsEntryView(entry: entry)
+        StaticConfiguration(
+            kind: kind,
+            provider: Provider()
+        ) { entry in
+            WidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
     }
 }
 
-struct NYT_Widgets_Previews: PreviewProvider {
-    static var previews: some View {
-        NYT_WidgetsEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
-    }
-}
+//struct NYT_Widgets_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NYT_WidgetsEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+//            .previewContext(WidgetPreviewContext(family: .systemSmall))
+//    }
+//}
