@@ -14,6 +14,8 @@ struct NYTEntry: TimelineEntry {
 }
 
 struct Provider: TimelineProvider {
+    var mostPopularDataService = MostPopularDataService(period: Period.daily.rawValue)
+
     func placeholder(in context: Context) -> NYTEntry {
         NYTEntry(date: Date(), article: MostPopularArticle.exampleData.first!)
     }
@@ -24,9 +26,19 @@ struct Provider: TimelineProvider {
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<NYTEntry>) -> Void) {
-        let entry = NYTEntry(date: Date(), article: MostPopularArticle.exampleData.first!)
-        let timeline = Timeline(entries: [entry], policy: .never)
-        completion(timeline)
+        mostPopularDataService.fetchMostPopularArticles(for: .viewed) { result in
+            switch result {
+            case .success(let articles):
+                let article = articles.first!
+                let entry = NYTEntry(date: Date(), article: article)
+                let timeline = Timeline(entries: [entry], policy: .atEnd)
+                completion(timeline)
+            case .failure(_):
+                let entry = NYTEntry(date: Date(), article: MostPopularArticle(id: 0, title: "N/A", abstract: "N/A", url: nil, published: "N/A", section: "N/A", subsection: nil, byline: "N/A", media: [Media.exampleData], keywords: "N/A"))
+                let timeline = Timeline(entries: [entry], policy: .atEnd)
+                completion(timeline)
+            }
+        }
     }
 }
 
