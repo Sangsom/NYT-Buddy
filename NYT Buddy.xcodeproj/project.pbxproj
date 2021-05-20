@@ -152,6 +152,7 @@
 		1BC7AC4A265541BB00668E2D /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B625BD92636BBBB009D7C10 /* Media.swift */; };
 		1BC7AC4B265541BF00668E2D /* MediaMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B625BDE2636BC88009D7C10 /* MediaMetadata.swift */; };
 		1BC7AC4C265541C600668E2D /* MostPopularData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85229B2632A9EF0082E7C1 /* MostPopularData.swift */; };
+		1BC7AC4F2656526E00668E2D /* SmallArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7AC4E2656526E00668E2D /* SmallArticleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -263,6 +264,7 @@
 		1BC7AC3D2655406200668E2D /* NYT_Widgets.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = NYT_Widgets.intentdefinition; sourceTree = "<group>"; };
 		1BC7AC3E2655406300668E2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BC7AC402655406300668E2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BC7AC4E2656526E00668E2D /* SmallArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallArticleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -695,12 +697,21 @@
 		1BC7AC3A2655406200668E2D /* NYT Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				1BC7AC4D2656525C00668E2D /* Views */,
 				1BC7AC3B2655406200668E2D /* NYT_Widgets.swift */,
 				1BC7AC3D2655406200668E2D /* NYT_Widgets.intentdefinition */,
 				1BC7AC3E2655406300668E2D /* Assets.xcassets */,
 				1BC7AC402655406300668E2D /* Info.plist */,
 			);
 			path = "NYT Widgets";
+			sourceTree = "<group>";
+		};
+		1BC7AC4D2656525C00668E2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1BC7AC4E2656526E00668E2D /* SmallArticleView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1021,6 +1032,7 @@
 				1BC7AC49265541B100668E2D /* MostPopularArticle.swift in Sources */,
 				1BC7AC4A265541BB00668E2D /* Media.swift in Sources */,
 				1BC7AC4B265541BF00668E2D /* MediaMetadata.swift in Sources */,
+				1BC7AC4F2656526E00668E2D /* SmallArticleView.swift in Sources */,
 				1BC7AC4C265541C600668E2D /* MostPopularData.swift in Sources */,
 				1BC7AC3C2655406200668E2D /* NYT_Widgets.swift in Sources */,
 			);

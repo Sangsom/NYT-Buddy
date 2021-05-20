@@ -35,19 +35,7 @@ struct WidgetEntryView: View {
 
     @ViewBuilder
     var body: some View {
-        VStack(spacing: 8) {
-            Text(entry.article.title)
-                .lineLimit(4)
-
-            HStack {
-                Spacer()
-                Text(entry.article.published)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-            }
-
-        }
-        .padding()
+        SmallArticleView(article: entry.article)
     }
 }
 
@@ -66,8 +54,16 @@ struct NYT_Widgets: Widget {
 }
 
 struct NYT_Widgets_Previews: PreviewProvider {
+    static let article = MostPopularArticle.exampleData.first!
+
     static var previews: some View {
-        WidgetEntryView(entry: NYTEntry(date: Date(), article: MostPopularArticle.exampleData.first!))
+        Group {
+            WidgetEntryView(
+                entry: NYTEntry(
+                    date: Date(),
+                    article: article)
+            )
             .previewContext(WidgetPreviewContext(family: .systemSmall))
+        }
     }
 }
