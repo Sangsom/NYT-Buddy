@@ -161,6 +161,8 @@
 		1BC7AC552656679100668E2D /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B748DFD263995A50024CCD1 /* Section.swift */; };
 		1BC7AC562656679400668E2D /* BookUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434B0264420BD00DE8556 /* BookUpdate.swift */; };
 		1BC7AC572656679E00668E2D /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522AE2633BD6F0082E7C1 /* AppConstants.swift */; };
+		1BC7AC5A2656931100668E2D /* MostPopularDays.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7AC592656931100668E2D /* MostPopularDays.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		1BC7AC5B2656931100668E2D /* MostPopularDays.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7AC592656931100668E2D /* MostPopularDays.intentdefinition */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -273,6 +275,7 @@
 		1BC7AC3E2655406300668E2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BC7AC402655406300668E2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BC7AC4E2656526E00668E2D /* SmallArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallArticleView.swift; sourceTree = "<group>"; };
+		1BC7AC592656931100668E2D /* MostPopularDays.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = MostPopularDays.intentdefinition; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -707,6 +710,7 @@
 			children = (
 				1BC7AC4D2656525C00668E2D /* Views */,
 				1BC7AC3B2655406200668E2D /* NYT_Widgets.swift */,
+				1BC7AC592656931100668E2D /* MostPopularDays.intentdefinition */,
 				1BC7AC3D2655406200668E2D /* NYT_Widgets.intentdefinition */,
 				1BC7AC3E2655406300668E2D /* Assets.xcassets */,
 				1BC7AC402655406300668E2D /* Info.plist */,
@@ -979,6 +983,7 @@
 				1B0434B1264420BD00DE8556 /* BookUpdate.swift in Sources */,
 				1B748E18263ACEED0024CCD1 /* Multimedia.swift in Sources */,
 				1B625BDF2636BC88009D7C10 /* MediaMetadata.swift in Sources */,
+				1BC7AC5A2656931100668E2D /* MostPopularDays.intentdefinition in Sources */,
 				1B8522B82633C64B0082E7C1 /* SelectPeriodView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1036,6 +1041,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BC7AC5B2656931100668E2D /* MostPopularDays.intentdefinition in Sources */,
 				1BC7AC502656676E00668E2D /* MostPopularDataService.swift in Sources */,
 				1BC7AC412655406300668E2D /* NYT_Widgets.intentdefinition in Sources */,
 				1BC7AC49265541B100668E2D /* MostPopularArticle.swift in Sources */,
