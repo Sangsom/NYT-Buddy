@@ -35,7 +35,19 @@ struct WidgetEntryView: View {
 
     @ViewBuilder
     var body: some View {
-        Text(entry.article.abstract)
+        VStack(spacing: 8) {
+            Text(entry.article.title)
+                .lineLimit(4)
+
+            HStack {
+                Spacer()
+                Text(entry.article.published)
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
+
+        }
+        .padding()
     }
 }
 
@@ -53,9 +65,9 @@ struct NYT_Widgets: Widget {
     }
 }
 
-//struct NYT_Widgets_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NYT_WidgetsEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-//            .previewContext(WidgetPreviewContext(family: .systemSmall))
-//    }
-//}
+struct NYT_Widgets_Previews: PreviewProvider {
+    static var previews: some View {
+        WidgetEntryView(entry: NYTEntry(date: Date(), article: MostPopularArticle.exampleData.first!))
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+    }
+}
