@@ -153,6 +153,14 @@
 		1BC7AC4B265541BF00668E2D /* MediaMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B625BDE2636BC88009D7C10 /* MediaMetadata.swift */; };
 		1BC7AC4C265541C600668E2D /* MostPopularData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85229B2632A9EF0082E7C1 /* MostPopularData.swift */; };
 		1BC7AC4F2656526E00668E2D /* SmallArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7AC4E2656526E00668E2D /* SmallArticleView.swift */; };
+		1BC7AC502656676E00668E2D /* MostPopularDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522982632A90F0082E7C1 /* MostPopularDataService.swift */; };
+		1BC7AC512656678600668E2D /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522AA2632F4CA0082E7C1 /* Period.swift */; };
+		1BC7AC522656678900668E2D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522BA2633C7510082E7C1 /* NetworkError.swift */; };
+		1BC7AC532656678C00668E2D /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522BD2633C77B0082E7C1 /* LoadingState.swift */; };
+		1BC7AC542656678F00668E2D /* MostPopularArticleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B570378263943EB00BCB707 /* MostPopularArticleType.swift */; };
+		1BC7AC552656679100668E2D /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B748DFD263995A50024CCD1 /* Section.swift */; };
+		1BC7AC562656679400668E2D /* BookUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0434B0264420BD00DE8556 /* BookUpdate.swift */; };
+		1BC7AC572656679E00668E2D /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522AE2633BD6F0082E7C1 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1028,13 +1036,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BC7AC502656676E00668E2D /* MostPopularDataService.swift in Sources */,
 				1BC7AC412655406300668E2D /* NYT_Widgets.intentdefinition in Sources */,
 				1BC7AC49265541B100668E2D /* MostPopularArticle.swift in Sources */,
 				1BC7AC4A265541BB00668E2D /* Media.swift in Sources */,
+				1BC7AC572656679E00668E2D /* AppConstants.swift in Sources */,
+				1BC7AC512656678600668E2D /* Period.swift in Sources */,
 				1BC7AC4B265541BF00668E2D /* MediaMetadata.swift in Sources */,
 				1BC7AC4F2656526E00668E2D /* SmallArticleView.swift in Sources */,
+				1BC7AC552656679100668E2D /* Section.swift in Sources */,
+				1BC7AC542656678F00668E2D /* MostPopularArticleType.swift in Sources */,
+				1BC7AC562656679400668E2D /* BookUpdate.swift in Sources */,
 				1BC7AC4C265541C600668E2D /* MostPopularData.swift in Sources */,
 				1BC7AC3C2655406200668E2D /* NYT_Widgets.swift in Sources */,
+				1BC7AC522656678900668E2D /* NetworkError.swift in Sources */,
+				1BC7AC532656678C00668E2D /* LoadingState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
