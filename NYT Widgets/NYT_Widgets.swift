@@ -39,7 +39,20 @@ struct Provider: IntentTimelineProvider {
                 let timeline = Timeline(entries: [entry], policy: .atEnd)
                 completion(timeline)
             case .failure(_):
-                let entry = NYTEntry(date: Date(), article: MostPopularArticle(id: 0, title: "N/A", abstract: "N/A", url: nil, published: "N/A", section: "N/A", subsection: nil, byline: "N/A", media: [Media.exampleData], keywords: "N/A"))
+                let entry = NYTEntry(
+                date: Date(),
+                article: MostPopularArticle(
+                    id: 0,
+                    title: "N/A",
+                    abstract: "N/A",
+                    url: nil,
+                    published: "N/A",
+                    section: "N/A",
+                    subsection: nil,
+                    byline: "N/A",
+                    media: [Media.exampleData],
+                    keywords: "N/A")
+                )
                 let timeline = Timeline(entries: [entry], policy: .atEnd)
                 completion(timeline)
             }
