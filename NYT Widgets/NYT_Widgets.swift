@@ -81,6 +81,8 @@ struct NYT_Widgets: Widget {
         ) { entry in
             WidgetEntryView(entry: entry)
         }
+        .configurationDisplayName("NYT Widge    t")
+        .description("Displays most popular article by selected period.")
     }
 }
 
