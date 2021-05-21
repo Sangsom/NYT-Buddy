@@ -29,6 +29,8 @@ struct Provider: IntentTimelineProvider {
     }
 
     func getTimeline(for configuration: SelectMostPopularPeriodIntent, in context: Context, completion: @escaping (Timeline<NYTEntry>) -> Void) {
+        mostPopularDataService.updatePeriod(configuration.period.rawValue)
+
         mostPopularDataService.fetchMostPopularArticles(for: .viewed) { result in
             switch result {
             case .success(let articles):

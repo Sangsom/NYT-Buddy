@@ -43,7 +43,7 @@
 					<key>INEnumValueDisplayNameID</key>
 					<string>Qbtw2y</string>
 					<key>INEnumValueIndex</key>
-					<integer>2</integer>
+					<integer>7</integer>
 					<key>INEnumValueName</key>
 					<string>weekly</string>
 				</dict>
@@ -53,7 +53,7 @@
 					<key>INEnumValueDisplayNameID</key>
 					<string>l9rJf5</string>
 					<key>INEnumValueIndex</key>
-					<integer>3</integer>
+					<integer>30</integer>
 					<key>INEnumValueName</key>
 					<string>monthly</string>
 				</dict>
