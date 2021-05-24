@@ -23,7 +23,7 @@ struct Story: Codable, Hashable, Identifiable {
         if let date = isoDateFormatter.date(from: published) {
             let dateFormatter = DateFormatter()
             dateFormatter.dateStyle = .short
-            dateFormatter.dateFormat = "yyyy-MM-dd"
+            dateFormatter.dateFormat = "dd MMM yyyy"
 
             return dateFormatter.string(from: date)
         } else {
