@@ -31,16 +31,19 @@ struct Provider: IntentTimelineProvider {
     func getTimeline(for configuration: SelectMostPopularPeriodIntent, in context: Context, completion: @escaping (Timeline<NYTEntry>) -> Void) {
         mostPopularDataService.updatePeriod(configuration.period.rawValue)
 
+        let date = Date()
+        let nextUpdateDate = Calendar.current.date(byAdding: .minute, value: 15, to: date)!
+
         mostPopularDataService.fetchMostPopularArticles(for: .viewed) { result in
             switch result {
             case .success(let articles):
                 let article = articles.first!
-                let entry = NYTEntry(date: Date(), article: article)
-                let timeline = Timeline(entries: [entry], policy: .atEnd)
+                let entry = NYTEntry(date: date, article: article)
+                let timeline = Timeline(entries: [entry], policy: .after(nextUpdateDate))
                 completion(timeline)
             case .failure(_):
                 let entry = NYTEntry(
-                date: Date(),
+                date: date,
                 article: MostPopularArticle(
                     id: 0,
                     title: "N/A",
@@ -53,7 +56,7 @@ struct Provider: IntentTimelineProvider {
                     media: [Media.exampleData],
                     keywords: "N/A")
                 )
-                let timeline = Timeline(entries: [entry], policy: .atEnd)
+                let timeline = Timeline(entries: [entry], policy: .after(nextUpdateDate))
                 completion(timeline)
             }
         }
@@ -81,7 +84,7 @@ struct NYT_Widgets: Widget {
         ) { entry in
             WidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("NYT Widge    t")
+        .configurationDisplayName("NYT Widget")
         .description("Displays most popular article by selected period.")
     }
 }
