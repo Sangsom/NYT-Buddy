@@ -24,6 +24,20 @@ struct MostPopularArticle: Codable, Identifiable, Hashable {
         return keywords.split(separator: ";").map({ String($0) })
     }
 
+    var publishedDateFormatted: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+
+        if let date = dateFormatter.date(from: published) {
+            let newFormatter = DateFormatter()
+            newFormatter.dateFormat = "dd MMM yyyy"
+
+            return newFormatter.string(from: date)
+        }
+
+        return published
+    }
+
     enum CodingKeys: String, CodingKey {
         case id
         case title
