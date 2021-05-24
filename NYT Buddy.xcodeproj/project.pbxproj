@@ -163,6 +163,7 @@
 		1BC7AC572656679E00668E2D /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8522AE2633BD6F0082E7C1 /* AppConstants.swift */; };
 		1BC7AC5A2656931100668E2D /* MostPopularDays.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7AC592656931100668E2D /* MostPopularDays.intentdefinition */; settings = {ATTRIBUTES = (codegen, ); }; };
 		1BC7AC5C26569AB600668E2D /* MostPopularDays.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7AC592656931100668E2D /* MostPopularDays.intentdefinition */; };
+		1BC7AC5E265BA3A900668E2D /* MediumArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC7AC5D265BA3A900668E2D /* MediumArticleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -276,6 +277,7 @@
 		1BC7AC402655406300668E2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BC7AC4E2656526E00668E2D /* SmallArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallArticleView.swift; sourceTree = "<group>"; };
 		1BC7AC592656931100668E2D /* MostPopularDays.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = MostPopularDays.intentdefinition; sourceTree = "<group>"; };
+		1BC7AC5D265BA3A900668E2D /* MediumArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumArticleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -722,6 +724,7 @@
 			isa = PBXGroup;
 			children = (
 				1BC7AC4E2656526E00668E2D /* SmallArticleView.swift */,
+				1BC7AC5D265BA3A900668E2D /* MediumArticleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1053,6 +1056,7 @@
 				1BC7AC552656679100668E2D /* Section.swift in Sources */,
 				1BC7AC542656678F00668E2D /* MostPopularArticleType.swift in Sources */,
 				1BC7AC562656679400668E2D /* BookUpdate.swift in Sources */,
+				1BC7AC5E265BA3A900668E2D /* MediumArticleView.swift in Sources */,
 				1BC7AC4C265541C600668E2D /* MostPopularData.swift in Sources */,
 				1BC7AC3C2655406200668E2D /* NYT_Widgets.swift in Sources */,
 				1BC7AC522656678900668E2D /* NetworkError.swift in Sources */,

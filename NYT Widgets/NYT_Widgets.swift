@@ -64,11 +64,17 @@ struct Provider: IntentTimelineProvider {
 }
 
 struct WidgetEntryView: View {
+    @Environment(\.widgetFamily) var family: WidgetFamily
+
     let entry: Provider.Entry
 
     @ViewBuilder
     var body: some View {
-        SmallArticleView(article: entry.article)
+        switch family {
+        case .systemSmall: SmallArticleView(article: entry.article)
+        case .systemMedium: MediumArticleView(article: entry.article)
+        default: SmallArticleView(article: entry.article)
+        }
     }
 }
 
@@ -84,6 +90,7 @@ struct NYT_Widgets: Widget {
         ) { entry in
             WidgetEntryView(entry: entry)
         }
+        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
         .configurationDisplayName("NYT Widget")
         .description("Displays most popular article by selected period.")
     }
@@ -100,6 +107,13 @@ struct NYT_Widgets_Previews: PreviewProvider {
                     article: article)
             )
             .previewContext(WidgetPreviewContext(family: .systemSmall))
+
+            WidgetEntryView(
+                entry: NYTEntry(
+                    date: Date(),
+                    article: article)
+            )
+            .previewContext(WidgetPreviewContext(family: .systemMedium))
         }
     }
 }
