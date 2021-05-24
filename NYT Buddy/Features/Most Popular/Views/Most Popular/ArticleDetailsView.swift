@@ -31,7 +31,7 @@ struct ArticleDetailsView: View {
                 }
 
                 Spacer()
-                Text(article.published)
+                Text(article.publishedDateFormatted)
             }
             .padding(.top)
             .foregroundColor(Color("AccentColor"))
