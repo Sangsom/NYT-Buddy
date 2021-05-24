@@ -10,7 +10,7 @@ import SwiftUI
 
 struct NYTEntry: TimelineEntry {
     let date: Date
-    let article: MostPopularArticle
+    let articles: [MostPopularArticle]
 }
 
 struct Provider: IntentTimelineProvider {
@@ -20,11 +20,11 @@ struct Provider: IntentTimelineProvider {
     var mostPopularDataService = MostPopularDataService(period: Period.daily.rawValue)
 
     func placeholder(in context: Context) -> NYTEntry {
-        NYTEntry(date: Date(), article: MostPopularArticle.exampleData.first!)
+        NYTEntry(date: Date(), articles: MostPopularArticle.exampleData)
     }
 
     func getSnapshot(for configuration: SelectMostPopularPeriodIntent, in context: Context, completion: @escaping (NYTEntry) -> Void) {
-        let entry = NYTEntry(date: Date(), article: MostPopularArticle.exampleData.first!)
+        let entry = NYTEntry(date: Date(), articles: MostPopularArticle.exampleData)
         completion(entry)
     }
 
@@ -37,14 +37,13 @@ struct Provider: IntentTimelineProvider {
         mostPopularDataService.fetchMostPopularArticles(for: .viewed) { result in
             switch result {
             case .success(let articles):
-                let article = articles.first!
-                let entry = NYTEntry(date: date, article: article)
+                let entry = NYTEntry(date: date, articles: articles)
                 let timeline = Timeline(entries: [entry], policy: .after(nextUpdateDate))
                 completion(timeline)
             case .failure(_):
                 let entry = NYTEntry(
                 date: date,
-                article: MostPopularArticle(
+                articles: [MostPopularArticle(
                     id: 0,
                     title: "N/A",
                     abstract: "N/A",
@@ -54,7 +53,7 @@ struct Provider: IntentTimelineProvider {
                     subsection: nil,
                     byline: "N/A",
                     media: [Media.exampleData],
-                    keywords: "N/A")
+                    keywords: "N/A")]
                 )
                 let timeline = Timeline(entries: [entry], policy: .after(nextUpdateDate))
                 completion(timeline)
@@ -71,9 +70,10 @@ struct WidgetEntryView: View {
     @ViewBuilder
     var body: some View {
         switch family {
-        case .systemSmall: SmallArticleView(article: entry.article)
-        case .systemMedium: MediumArticleView(article: entry.article)
-        default: SmallArticleView(article: entry.article)
+        case .systemSmall: SmallArticleView(article: entry.articles.first!)
+        case .systemMedium: MediumArticleView(article: entry.articles.first!)
+        case .systemLarge: LargeArticleView(articles: entry.articles)
+        default: SmallArticleView(article: entry.articles.first!)
         }
     }
 }
@@ -97,23 +97,28 @@ struct NYT_Widgets: Widget {
 }
 
 struct NYT_Widgets_Previews: PreviewProvider {
-    static let article = MostPopularArticle.exampleData.first!
-
     static var previews: some View {
         Group {
             WidgetEntryView(
                 entry: NYTEntry(
                     date: Date(),
-                    article: article)
+                    articles: MostPopularArticle.exampleData)
             )
             .previewContext(WidgetPreviewContext(family: .systemSmall))
 
             WidgetEntryView(
                 entry: NYTEntry(
                     date: Date(),
-                    article: article)
+                    articles: MostPopularArticle.exampleData)
             )
             .previewContext(WidgetPreviewContext(family: .systemMedium))
+
+            WidgetEntryView(
+                entry: NYTEntry(
+                    date: Date(),
+                    articles: MostPopularArticle.exampleData)
+            )
+            .previewContext(WidgetPreviewContext(family: .systemLarge))
         }
     }
 }
