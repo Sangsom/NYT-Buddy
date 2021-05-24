@@ -20,7 +20,7 @@ struct LargeArticleView: View {
 
                 HStack {
                     Spacer()
-                    Text(article.published)
+                    Text(article.publishedDateFormatted)
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                 }
